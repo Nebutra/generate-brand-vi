@@ -75,13 +75,13 @@ git clone https://github.com/Nebutra/generate-brand-kit.git ~/.claude/skills/gen
 ### Upstream dependency: an image-generation skill
 
 Raster stages of the DAG need an image-generation tool. This skill pairs
-with the open-source [**generate-image**](https://github.com/Nebutra/generate-image)
+with the open-source [**generate-image**](https://github.com/TsekaLuk/generate-image)
 skill — a pluggable multi-provider CLI (OpenAI `gpt-image-2` by default,
 plus 302.AI / OpenRouter / SiliconFlow) whose `--dag-file` format is
 exactly what `brand-generation-dag.yaml` is written in:
 
 ```bash
-git clone https://github.com/Nebutra/generate-image.git ~/.claude/skills/generate-image
+git clone https://github.com/TsekaLuk/generate-image.git ~/.claude/skills/generate-image
 cd ~/.claude/skills/generate-image && uv sync && cp .env.example .env  # fill in your key
 ```
 

@@ -72,13 +72,13 @@ git clone https://github.com/Nebutra/generate-brand-kit.git ~/.claude/skills/gen
 ### 上游依赖：生图 skill
 
 DAG 的栅格生成阶段需要一个生图工具。本 skill 与开源的
-[**generate-image**](https://github.com/Nebutra/generate-image) skill 配套——
+[**generate-image**](https://github.com/TsekaLuk/generate-image) skill 配套——
 可插拔多 provider 的生图 CLI（默认 OpenAI `gpt-image-2`，另支持
 302.AI / OpenRouter / SiliconFlow 中转站），其 `--dag-file` 格式正是
 `brand-generation-dag.yaml` 所用的格式：
 
 ```bash
-git clone https://github.com/Nebutra/generate-image.git ~/.claude/skills/generate-image
+git clone https://github.com/TsekaLuk/generate-image.git ~/.claude/skills/generate-image
 cd ~/.claude/skills/generate-image && uv sync && cp .env.example .env  # 填入你的 key
 ```
 
