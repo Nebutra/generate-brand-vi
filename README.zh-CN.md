@@ -69,6 +69,26 @@ git clone https://github.com/Nebutra/generate-brand-kit.git ~/.claude/skills/gen
 **Codex**：克隆到你的 skills 路径；接口元数据在
 [`agents/openai.yaml`](agents/openai.yaml)。
 
+### 上游依赖：生图 skill
+
+DAG 的栅格生成阶段需要一个生图工具。本 skill 与开源的
+[**generate-image**](https://github.com/Nebutra/generate-image) skill 配套——
+可插拔多 provider 的生图 CLI（默认 OpenAI `gpt-image-2`，另支持
+302.AI / OpenRouter / SiliconFlow 中转站），其 `--dag-file` 格式正是
+`brand-generation-dag.yaml` 所用的格式：
+
+```bash
+git clone https://github.com/Nebutra/generate-image.git ~/.claude/skills/generate-image
+cd ~/.claude/skills/generate-image && uv sync && cp .env.example .env  # 填入你的 key
+```
+
+换用其他生图工具也可以——DAG 规格就是普通 YAML——但配合 generate-image
+时，仓库里提交的 DAG 可以原样直接跑：
+
+```bash
+uv run generate-image --dag-file resources/brand/brand-generation-dag.yaml
+```
+
 ## 60 秒上手
 
 在任意需要品牌的仓库里，对你的 agent 说：

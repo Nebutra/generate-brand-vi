@@ -72,6 +72,26 @@ git clone https://github.com/Nebutra/generate-brand-kit.git ~/.claude/skills/gen
 **Codex**: clone into your skills path; the interface metadata lives in
 [`agents/openai.yaml`](agents/openai.yaml).
 
+### Upstream dependency: an image-generation skill
+
+Raster stages of the DAG need an image-generation tool. This skill pairs
+with the open-source [**generate-image**](https://github.com/Nebutra/generate-image)
+skill — a pluggable multi-provider CLI (OpenAI `gpt-image-2` by default,
+plus 302.AI / OpenRouter / SiliconFlow) whose `--dag-file` format is
+exactly what `brand-generation-dag.yaml` is written in:
+
+```bash
+git clone https://github.com/Nebutra/generate-image.git ~/.claude/skills/generate-image
+cd ~/.claude/skills/generate-image && uv sync && cp .env.example .env  # fill in your key
+```
+
+Any other image tool works too — the DAG spec is plain YAML — but with
+generate-image the committed DAG runs as-is:
+
+```bash
+uv run generate-image --dag-file resources/brand/brand-generation-dag.yaml
+```
+
 ## 60-second start
 
 Inside your agent session, in any repo that needs a brand:
