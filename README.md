@@ -13,6 +13,8 @@ One line of brand philosophy → VI rules → generation DAG → approved master
 [![Python](https://img.shields.io/badge/scripts-python%203%2C%20stdlib%20only-274690?style=flat-square)](scripts/)
 [![Dogfooded](https://img.shields.io/badge/branding-generated%20by%20itself-1A1917?style=flat-square)](#-proof-this-repos-brand-was-generated-by-this-skill)
 
+**English** · [简体中文](README.zh-CN.md)
+
 </div>
 
 ---
@@ -143,21 +145,3 @@ Ran this skill on your project? Open an issue with a screenshot of your
 `approved/` masters and your one-line philosophy — the best kits get linked
 here as worked examples. If the skill saved you a design cycle, **a ⭐ helps
 other agents' humans find it.**
-
-<details>
-<summary><b>简体中文</b></summary>
-
-**generate-brand-kit** 是一个 agent skill：把一句话的品牌哲学，固化成可复现的
-资产流水线 —— VI 规则 → 生成 DAG → 批准母版 → 产品级文件（SVG / 图标 / 社交图）。
-
-本仓库的 logo、hero 图与社交预览图，全部由该 skill 对自身仓库运行生成，
-完整决策链见 `resources/brand/`。
-
-安装：克隆到 `~/.claude/skills/generate-brand-kit`（Claude Code）或你的
-Codex skills 目录，然后在任意仓库中说：
-
-```text
-使用 generate-brand-kit 为这个项目设计品牌，哲学是："……"
-```
-
-</details>
