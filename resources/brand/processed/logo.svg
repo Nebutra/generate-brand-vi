@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="generate-brand-kit logo: four geometric part-tiles assembling into a square mark, one tile snapping into place">
+  <style>
+    .gp { fill: #1A1917; }
+    .pd { fill: #FAF7F0; }
+    @media (prefers-color-scheme: dark) {
+      .gp { fill: #FAF7F0; }
+      .pd { fill: #1A1917; }
+    }
+  </style>
+  <!-- top-left part: quarter-disc -->
+  <path d="M58 58 H16 A42 42 0 0 1 58 16 Z" fill="#E4572E"/>
+  <!-- top-right part: half-square triangle -->
+  <path d="M62 58 L104 16 V58 Z" fill="#274690"/>
+  <!-- bottom-left part: dot-in-square -->
+  <rect class="gp" x="16" y="62" width="42" height="42"/>
+  <circle class="pd" cx="37" cy="83" r="9"/>
+  <!-- bottom-right part: solid block, snapping into place -->
+  <rect class="gp" x="70" y="70" width="42" height="42"/>
+</svg>

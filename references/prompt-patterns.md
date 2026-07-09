@@ -40,6 +40,16 @@ Mood: <culture/product tone>. Keep low visual noise behind UI.
 No generated text, no extra logos, no watermark.
 ```
 
+## Standing Negative Constraints (append to every generation prompt)
+
+Ban the AI-slop signature explicitly; models default to it:
+
+```text
+No purple-blue gradients, no floating gradient orbs, no glassmorphism,
+no sparkle/star AI icons, no fake 3D depth or bevels, no watermark,
+no generated text.
+```
+
 ## Prompt Hygiene
 
 - Name colors and materials; do not rely on vague “modern” alone.

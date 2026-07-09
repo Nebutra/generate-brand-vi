@@ -21,7 +21,9 @@ Create brand systems that behave like water: take the shape of the project, prod
    - Identify build commands and generated outputs. Do not replace only the visible logo while leaving compiled assets stale.
 
 3. **Distill the brand philosophy into VI rules.**
+   - Abstract the brand IP from the product's business scenario — what the product does or means for its buyers. Never promote an incidental metaphor (from internal docs, the agent's own process language, or this skill's documentation) into the client brand's IP.
    - Name, language variants, tone, design philosophy, cultural references, material metaphors, shape grammar, palette, typography, imagery, motion if relevant, and negative constraints.
+   - Position against the current aesthetic landscape with `references/trends-2026.md`; ground craft decisions in `references/design-theory.md`; pull stage-appropriate visual references via `references/inspiration-sources.md`.
    - Treat user aesthetic direction as product strategy, not decoration.
    - Write or update a `visual-identity.md` / `brand-kit-inventory.md` style document before mass generation.
    - Use `references/workflow.md` for the decision gates.
@@ -60,9 +62,15 @@ Create brand systems that behave like water: take the shape of the project, prod
 - `references/generation-dag.md`: DAG design and consistency patterns.
 - `references/prompt-patterns.md`: prompt architecture for professional visual generation.
 - `references/validation.md`: QA, integration, and legacy cleanup checks.
+- `references/trends-2026.md`: current aesthetic trends — rising, falling, and trend-tracking sources.
+- `references/design-theory.md`: durable identity theory — strategy frameworks, distinctive-asset science, craft criteria, verification battery, verbal identity.
+- `references/inspiration-sources.md`: reference galleries mapped to pipeline stages, GitHub brand-as-code ecosystem (DESIGN.md schema, icon slot canon, DTCG tokens), and AI-era anti-slop practice.
 
 ## Guardrails
 
+- Do not derive the brand IP from the skill's own process metaphors or other incidental language; the mark must abstract the product's business scenario and pass the one-sentence buyer test (`references/design-theory.md`).
+- Do not accept AI-slop defaults: purple-blue gradient orbs, glassmorphism, sparkle icons, fake 3D depth, default-grotesk typography. Ban them in prompts and reject them in review.
+- Do not ship brand color pairings that fail WCAG 2.2 AA contrast; emit palettes as verified foreground/background pairs.
 - Do not let rejected exploration files remain in the product-consumable asset tree.
 - Do not preserve old brand remotes, names, docs, or assets when the user asks for a complete migration.
 - Do not confuse compatibility code named `legacy` with visual legacy assets; inspect context before deleting.
