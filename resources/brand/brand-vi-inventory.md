@@ -1,4 +1,4 @@
-# generate-brand-kit Brand Kit Inventory
+# generate-brand-vi Brand VI Inventory
 
 ## Brand Philosophy
 

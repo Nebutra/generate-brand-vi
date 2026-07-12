@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="resources/brand/processed/hero.png" alt="generate-brand-kit —— 几何部件拼装成品牌标识" width="100%">
+<img src="resources/brand/processed/hero.png" alt="generate-brand-vi —— 几何部件拼装成品牌系统" width="100%">
 
 <img src="resources/brand/processed/logo.svg" alt="" width="96">
 
-# generate-brand-kit
+# generate-brand-vi
 
 **部件进，品牌出。**
 一句话品牌哲学 → VI 规则 → 生成 DAG → 批准母版 → 产品级文件。
@@ -27,10 +27,10 @@
 | 产物 | 文件 |
 | --- | --- |
 | 视觉识别规则 | [`resources/brand/visual-identity.md`](resources/brand/visual-identity.md) |
-| 生成 DAG（可直接运行的规格） | [`resources/brand/brand-generation-dag.yaml`](resources/brand/brand-generation-dag.yaml) |
+| 生成 DAG（可直接运行的规格） | [`resources/brand/brand-vi-generation-dag.yaml`](resources/brand/brand-vi-generation-dag.yaml) |
 | 批准的栅格母版 | [`resources/brand/approved/`](resources/brand/approved/) |
 | 手工矢量化的生产 logo | [`resources/brand/processed/logo.svg`](resources/brand/processed/logo.svg) |
-| 资产清单与消费映射 | [`resources/brand/brand-kit-inventory.md`](resources/brand/brand-kit-inventory.md) |
+| 资产清单与消费映射 | [`resources/brand/brand-vi-inventory.md`](resources/brand/brand-vi-inventory.md) |
 
 这就是全部卖点：不是"生成一个 logo"，而是留下一套**其他 agent 可以接手
 并延展的品牌系统**——有记录的决策、可复现的 DAG、干净的批准/废弃隔离。
@@ -44,7 +44,9 @@
 - ❌ 废弃的探索稿留在资产树里，等着被未来的 agent 误用
 - ❌ 只换了可见的 logo，编译产物图标、favicon、文档全都还是旧的
 
-这个 skill 让 agent 像品牌工程师一样工作：
+这个 skill 让 agent 像品牌工程师一样工作。它使用可组合的 A1-B13 传统 VI
+与 C1-C14 AI SaaS 交付目录：
+场景预设只提供起点，再根据组织真实使用表面增删模块。
 
 1. **先读现有系统** —— 资产目录、图标构建脚本、文档。
 2. **盘点每一个资产槽位** —— 产品实际消费哪些文件。
@@ -63,30 +65,30 @@
 **Claude Code**（个人 skills 目录）：
 
 ```bash
-git clone https://github.com/Nebutra/generate-brand-kit.git ~/.claude/skills/generate-brand-kit
+git clone https://github.com/Nebutra/generate-brand-vi.git ~/.claude/skills/generate-brand-vi
 ```
 
 **Codex**：克隆到你的 skills 路径；接口元数据在
 [`agents/openai.yaml`](agents/openai.yaml)。
 
-### 上游依赖：生图 skill
+### 内置生图后端
 
-DAG 的栅格生成阶段需要一个生图工具。本 skill 与开源的
-[**generate-image**](https://github.com/TsekaLuk/generate-image) skill 配套——
-可插拔多 provider 的生图 CLI（默认 OpenAI `gpt-image-2`，另支持
-302.AI / OpenRouter / SiliconFlow 中转站），其 `--dag-file` 格式正是
-`brand-generation-dag.yaml` 所用的格式：
+DAG 的栅格阶段通过内置适配器调用开源
+[**generate-image**](https://github.com/TsekaLuk/generate-image) 后端。适配器会自动发现
+同级或全局安装，默认使用 `mox`，并由后端读取全局 `MOX_API_KEY`。
 
 ```bash
 git clone https://github.com/TsekaLuk/generate-image.git ~/.claude/skills/generate-image
-cd ~/.claude/skills/generate-image && uv sync && cp .env.example .env  # 填入你的 key
+cd ~/.claude/skills/generate-image && uv sync
 ```
 
-换用其他生图工具也可以——DAG 规格就是普通 YAML——但配合 generate-image
-时，仓库里提交的 DAG 可以原样直接跑：
+这只是一次性的后端安装；已有的 `MOX_API_KEY` 等全局配置会自动复用。
+
+先免费预览调用数和费用，批准后再执行真实调用：
 
 ```bash
-uv run generate-image --dag-file resources/brand/brand-generation-dag.yaml
+python3 scripts/run_brand_image_dag.py --repo .
+python3 scripts/run_brand_image_dag.py --repo . --execute
 ```
 
 ## 60 秒上手
@@ -94,7 +96,7 @@ uv run generate-image --dag-file resources/brand/brand-generation-dag.yaml
 在任意需要品牌的仓库里，对你的 agent 说：
 
 ```text
-使用 generate-brand-kit 为这个项目设计视觉识别。
+使用 generate-brand-vi 为这个项目设计视觉识别。
 品牌哲学："<你的一句话品牌理念>"
 ```
 
@@ -105,19 +107,26 @@ uv run generate-image --dag-file resources/brand/brand-generation-dag.yaml
 python3 scripts/scan_brand_assets.py . --brand-term 旧名 --brand-term 新名
 
 # 脚手架：approved/ generated/ processed/ + VI、清单、DAG 模板
-python3 scripts/create_brand_kit_scaffold.py --brand MyProduct \
-  --philosophy "整套识别都必须表达的那一句话"
+python3 scripts/create_brand_vi_scaffold.py --brand MyProduct \
+  --philosophy "整套识别都必须表达的那一句话" \
+  --profile industrial \
+  --include-module b13 \
+  --exclude-module b3
 ```
+
+AI SaaS 产品从 `--profile ai-saas` 开始，再删掉产品实际不消费的模块。
 
 agent 会填充模板、用可用的生图工具执行 DAG，并且只把批准的母版
 晋升到产品路径。
+对于商标法律意见、印刷打样、供应商刀版、空间工程、施工图和原创声音版权，
+skill 会生成明确的外部专业交接说明，而不会冒充已经获得专业审批。
 
 ## 流水线怎么流
 
 ```mermaid
 graph TD
     A[品牌哲学<br/>一句话意图] --> B[visual-identity.md<br/>形状语法 · 色板 · 负面约束]
-    B --> C[brand-generation-dag.yaml]
+    B --> C[brand-vi-generation-dag.yaml]
     C --> D[01 材质基调板]
     D --> E[02 核心 mark 种子]
     E --> F[03 生产净化 mark]
@@ -144,7 +153,7 @@ references/
   inspiration-sources.md     # 按阶段映射的参考库 + brand-as-code 生态
 scripts/
   scan_brand_assets.py       # 盘点任意仓库的品牌文件与文本命中
-  create_brand_kit_scaffold.py  # 中立的 approved/generated/processed 脚手架
+  create_brand_vi_scaffold.py   # 中立的 approved/generated/processed 脚手架
 resources/brand/             # 本仓库自己的 kit —— 活的示例
 ```
 

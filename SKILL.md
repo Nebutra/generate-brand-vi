@@ -1,9 +1,9 @@
 ---
-name: generate-brand-kit
-description: Create or migrate a complete brand kit and production asset pipeline for a repo, app, system, product, or campaign. Use when Codex is asked to design a brand/VI/visual identity, replace an existing brand, generate logo/icon/app-icon/hero/social/background assets, build image-generation DAGs and prompts, translate abstract brand philosophy into product-consumable files, audit old brand assets, or clean up legacy/rejected visual material.
+name: generate-brand-vi
+description: Create or migrate a modular brand/VI kit and production asset pipeline for a repo, app, system, product, organization, or campaign. Use when Codex is asked to design a visual identity, define brand strategy and verbal identity, replace an existing brand, generate logo/icon/app-icon/hero/social/print/packaging/environment/motion-ready assets, build image-generation DAGs and prompts, translate brand philosophy into product-consumable files, audit old brand assets, or clean up legacy/rejected visual material.
 ---
 
-# Generate Brand Kit
+# Generate Brand VI
 
 ## Core Idea
 
@@ -15,17 +15,21 @@ Create brand systems that behave like water: take the shape of the project, prod
    - Inspect repo style docs, asset folders, app configs, icon build scripts, locale/product names, README/social images, and current brand terms.
    - If the repo is unfamiliar, run `scripts/scan_brand_assets.py <repo> --brand-term <old> --brand-term <new>` for an inventory seed.
 
-2. **Define the target material list before generating.**
+2. **Select modules and define the target material list before generating.**
+   - Select composable VI modules from `references/vi-deliverables.json`. Use a scene profile only as a starting suggestion, then add or remove modules based on actual consumption. Never model completeness as a linear `core/digital/full` ladder.
+   - Mark every selected item `required`, `optional`, `not applicable`, or `external handoff`; inventory deliverables item by item rather than collapsing them into broad categories.
    - Create an inventory of every slot the product consumes: SVG, PNG, ICNS, ICO, app config icons, favicons, splash images, README/hero/social backgrounds, mobile adaptive icons, in-app logos, docs images, and generated source masters.
+   - Consider A1-A5 foundations, B1-B13 physical/application modules, and C1-C14 AI SaaS product/trust modules. AI SaaS modules cover product identity, AI disclosure, runtime states, prompts, evidence, safety, privacy, developer experience, lifecycle, enterprise trust, provenance, accessibility, ecosystem architecture, motion, and sonic behavior.
    - Use `references/asset-taxonomy.md` for common slots and sizes.
    - Identify build commands and generated outputs. Do not replace only the visible logo while leaving compiled assets stale.
 
-3. **Distill the brand philosophy into VI rules.**
+3. **Distill strategy and philosophy into VI rules.**
+   - Establish the evidence level: supplied facts, repo evidence, stakeholder hypothesis, or research-backed finding. Do not invent market research or claim legal clearance.
    - Abstract the brand IP from the product's business scenario — what the product does or means for its buyers. Never promote an incidental metaphor (from internal docs, the agent's own process language, or this skill's documentation) into the client brand's IP.
    - Name, language variants, tone, design philosophy, cultural references, material metaphors, shape grammar, palette, typography, imagery, motion if relevant, and negative constraints.
    - Position against the current aesthetic landscape with `references/trends-2026.md`; ground craft decisions in `references/design-theory.md`; pull stage-appropriate visual references via `references/inspiration-sources.md`.
    - Treat user aesthetic direction as product strategy, not decoration.
-   - Write or update a `visual-identity.md` / `brand-kit-inventory.md` style document before mass generation.
+   - Write or update a `visual-identity.md` / `brand-vi-inventory.md` style document before mass generation.
    - Use `references/workflow.md` for the decision gates.
 
 4. **Design the generation DAG deliberately.**
@@ -35,14 +39,17 @@ Create brand systems that behave like water: take the shape of the project, prod
    - Use `references/generation-dag.md` and `references/prompt-patterns.md`.
 
 5. **Generate, judge, and promote assets.**
-   - Use the available image generation/editing skill or tool when raster generation is needed.
+   - Use the bundled adapter `scripts/run_brand_image_dag.py` for raster DAGs. It automatically discovers the sibling `generate-image` skill, defaults to its `mox` provider, and reads `MOX_API_KEY` through that backend. Do not ask the user to restate the path or credential setup.
+   - Run the adapter without `--execute` first to show the prompt count and estimated billed cost. Use `--execute` only after the user approves the real generation.
+   - Set `GENERATE_IMAGE_SKILL` only when auto-discovery cannot locate the backend. Do not copy credentials or vendor a second generate-image implementation into this skill.
    - Promote only approved masters into an `approved/` or equivalent stable directory.
    - Keep rejected explorations out of the product path; remove or quarantine them so future agents cannot accidentally consume them.
 
-6. **Convert into product-ready assets.**
+6. **Convert into production-ready assets and handoffs.**
    - Hand-vectorize or edit SVG for production marks when raster output is not enough.
    - Export all required bitmap sizes and platform formats. Use existing repo icon scripts when present.
    - For desktop icons, verify alpha/transparent intent; for mobile icons, respect platform-specific opaque/adaptive requirements.
+   - Produce editable templates and specifications where supported. For trademark clearance, font licensing, print proofs, packaging dielines, environmental engineering, original music, and construction files, create a precise external-handoff brief unless qualified tooling and source data are available.
 
 7. **Integrate and verify.**
    - Replace source assets, generated assets, app config references, in-app components, documentation, and localized product names.
@@ -56,9 +63,11 @@ Create brand systems that behave like water: take the shape of the project, prod
 ## Useful Resources
 
 - `scripts/scan_brand_assets.py`: inventory likely brand files and text hits in a repo.
-- `scripts/create_brand_kit_scaffold.py`: create a neutral brand-kit scaffold in a target repo.
+- `scripts/create_brand_vi_scaffold.py`: create a neutral brand-VI scaffold in a target repo.
+- `scripts/run_brand_image_dag.py`: zero-config adapter for the installed `generate-image` backend; dry-run by default.
 - `references/workflow.md`: detailed process, decision gates, and “water-shape” interpretation.
 - `references/asset-taxonomy.md`: product-consumable asset checklist.
+- `references/vi-deliverables.json`: machine-readable A1-B13 deliverable catalog and composable scene profiles.
 - `references/generation-dag.md`: DAG design and consistency patterns.
 - `references/prompt-patterns.md`: prompt architecture for professional visual generation.
 - `references/validation.md`: QA, integration, and legacy cleanup checks.
@@ -75,4 +84,5 @@ Create brand systems that behave like water: take the shape of the project, prod
 - Do not preserve old brand remotes, names, docs, or assets when the user asks for a complete migration.
 - Do not confuse compatibility code named `legacy` with visual legacy assets; inspect context before deleting.
 - Do not introduce a landing-page aesthetic into operational software unless the product surface actually calls for it.
+- Do not present strategy hypotheses as research, trademark searches as legal opinions, screen color as a print proof, concept packaging as a production dieline, or environment mockups as construction drawings.
 - Do not use one-off image outputs as final vectors when the repo needs SVG or platform icon formats.

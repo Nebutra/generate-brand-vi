@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="resources/brand/processed/hero.png" alt="generate-brand-kit — geometric parts assembling into a brand mark" width="100%">
+<img src="resources/brand/processed/hero.png" alt="generate-brand-vi — geometric parts assembling into a brand system" width="100%">
 
 <img src="resources/brand/processed/logo.svg" alt="" width="96">
 
-# generate-brand-kit
+# generate-brand-vi
 
 **Parts in, brand out.**
 One line of brand philosophy → VI rules → generation DAG → approved masters → product-ready files.
@@ -28,10 +28,10 @@ full paper trail is committed:
 | Artifact | File |
 | --- | --- |
 | Visual identity rules | [`resources/brand/visual-identity.md`](resources/brand/visual-identity.md) |
-| Generation DAG (runnable spec) | [`resources/brand/brand-generation-dag.yaml`](resources/brand/brand-generation-dag.yaml) |
+| Generation DAG (runnable spec) | [`resources/brand/brand-vi-generation-dag.yaml`](resources/brand/brand-vi-generation-dag.yaml) |
 | Approved raster masters | [`resources/brand/approved/`](resources/brand/approved/) |
 | Hand-vectorized production logo | [`resources/brand/processed/logo.svg`](resources/brand/processed/logo.svg) |
-| Asset inventory & consumption map | [`resources/brand/brand-kit-inventory.md`](resources/brand/brand-kit-inventory.md) |
+| Asset inventory & consumption map | [`resources/brand/brand-vi-inventory.md`](resources/brand/brand-vi-inventory.md) |
 
 That is the whole pitch: not "generate a logo," but leave behind a **brand
 system another agent can pick up and extend** — documented decisions,
@@ -46,7 +46,9 @@ Asking an agent to "make me a logo" produces a one-off image and a mess:
 - ❌ rejected explorations left in the asset tree for future agents to consume
 - ❌ the visible logo replaced while compiled icons, favicons, and docs stay stale
 
-This skill makes the agent behave like a brand engineer instead:
+This skill makes the agent behave like a brand engineer instead. It uses a
+composable A1-B13 traditional VI and C1-C14 AI SaaS catalog: scene profiles provide a starting set,
+then modules are added or removed to match the organization's real surfaces.
 
 1. **Read the existing system first** — asset folders, icon build scripts, docs.
 2. **Inventory every asset slot** the product actually consumes.
@@ -66,30 +68,31 @@ This skill makes the agent behave like a brand engineer instead:
 **Claude Code** (personal skills directory):
 
 ```bash
-git clone https://github.com/Nebutra/generate-brand-kit.git ~/.claude/skills/generate-brand-kit
+git clone https://github.com/Nebutra/generate-brand-vi.git ~/.claude/skills/generate-brand-vi
 ```
 
 **Codex**: clone into your skills path; the interface metadata lives in
 [`agents/openai.yaml`](agents/openai.yaml).
 
-### Upstream dependency: an image-generation skill
+### Built-in image-generation backend
 
-Raster stages of the DAG need an image-generation tool. This skill pairs
-with the open-source [**generate-image**](https://github.com/TsekaLuk/generate-image)
-skill — a pluggable multi-provider CLI (OpenAI `gpt-image-2` by default,
-plus 302.AI / OpenRouter / SiliconFlow) whose `--dag-file` format is
-exactly what `brand-generation-dag.yaml` is written in:
+Raster stages use the open-source [**generate-image**](https://github.com/TsekaLuk/generate-image)
+backend through a bundled adapter. The adapter discovers a sibling/global install,
+uses `mox` by default, and lets the backend read global `MOX_API_KEY` configuration.
 
 ```bash
 git clone https://github.com/TsekaLuk/generate-image.git ~/.claude/skills/generate-image
-cd ~/.claude/skills/generate-image && uv sync && cp .env.example .env  # fill in your key
+cd ~/.claude/skills/generate-image && uv sync
 ```
 
-Any other image tool works too — the DAG spec is plain YAML — but with
-generate-image the committed DAG runs as-is:
+This is a one-time backend installation only. Existing global provider
+configuration such as `MOX_API_KEY` is reused automatically.
+
+Preview cost without making a billed call, then execute after approval:
 
 ```bash
-uv run generate-image --dag-file resources/brand/brand-generation-dag.yaml
+python3 scripts/run_brand_image_dag.py --repo .
+python3 scripts/run_brand_image_dag.py --repo . --execute
 ```
 
 ## 60-second start
@@ -97,7 +100,7 @@ uv run generate-image --dag-file resources/brand/brand-generation-dag.yaml
 Inside your agent session, in any repo that needs a brand:
 
 ```text
-Use generate-brand-kit to design a visual identity for this project.
+Use generate-brand-vi to design a visual identity for this project.
 Philosophy: "<your one-line brand idea>"
 ```
 
@@ -108,19 +111,28 @@ Or seed the structure by hand first:
 python3 scripts/scan_brand_assets.py . --brand-term oldname --brand-term newname
 
 # scaffold approved/ generated/ processed/ + VI, inventory, and DAG templates
-python3 scripts/create_brand_kit_scaffold.py --brand MyProduct \
-  --philosophy "one line that the whole identity must express"
+python3 scripts/create_brand_vi_scaffold.py --brand MyProduct \
+  --philosophy "one line that the whole identity must express" \
+  --profile industrial \
+  --include-module b13 \
+  --exclude-module b3
 ```
+
+For an AI SaaS product, start with `--profile ai-saas` and remove modules the
+actual product does not consume.
 
 The agent fills the templates, runs the DAG with whatever image-generation
 tool is available, and promotes only approved masters into product paths.
+For trademark clearance, press proofs, supplier dielines, spatial engineering,
+construction drawings, and original audio rights, it produces an explicit
+external-handoff brief instead of claiming professional approval.
 
 ## How the pipeline flows
 
 ```mermaid
 graph TD
     A[Brand philosophy<br/>one line of intent] --> B[visual-identity.md<br/>shape grammar · palette · negative constraints]
-    B --> C[brand-generation-dag.yaml]
+    B --> C[brand-vi-generation-dag.yaml]
     C --> D[01 material board]
     D --> E[02 core mark seed]
     E --> F[03 production-clean mark]
@@ -148,7 +160,7 @@ references/
   inspiration-sources.md     # stage-mapped galleries + brand-as-code ecosystem
 scripts/
   scan_brand_assets.py       # inventory brand files & text hits in any repo
-  create_brand_kit_scaffold.py  # neutral approved/generated/processed scaffold
+  create_brand_vi_scaffold.py   # neutral approved/generated/processed scaffold
 resources/brand/             # this repo's own kit — a live worked example
 ```
 

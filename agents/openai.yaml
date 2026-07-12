@@ -1,4 +1,4 @@
 interface:
-  display_name: "Generate Brand Kit"
-  short_description: "Create brand systems and production assets"
-  default_prompt: "Use $generate-brand-kit to create a reusable brand kit and product-ready asset pipeline for this project."
+  display_name: "Generate Brand VI"
+  short_description: "Create modular VI systems and production assets"
+  default_prompt: "Use $generate-brand-vi to select the relevant VI modules, create their production assets, and verify every item and specialist handoff."

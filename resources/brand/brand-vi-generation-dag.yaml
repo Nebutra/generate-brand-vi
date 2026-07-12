@@ -1,4 +1,4 @@
-# generate-brand-kit brand generation DAG — "kit-of-parts" identity (v2)
+# generate-brand-vi brand generation DAG — "kit-of-parts" identity (v2)
 # Serial DAG: each task references the approved output of the previous one.
 # Standing negative constraints appended per references/prompt-patterns.md.
 

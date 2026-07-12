@@ -13,36 +13,48 @@ The useful abstraction is “water shape”:
 
 ## Decision Gates
 
-1. **Current-state gate**
+1. **Scope gate**
+   - Which A1-A5, B1-B13, and C1-C14 modules match the organization's actual surfaces?
+   - Which scene profile is a useful starting point, and what must be added or removed?
+   - Which deliverables are required, optional, not applicable, or external handoff?
+   - Which claims are based on supplied facts, repo evidence, hypotheses, or research?
+
+2. **Current-state gate**
    - What asset files already exist?
    - Which files are source masters versus generated outputs?
    - Which commands regenerate outputs?
    - Which docs/configs/components mention old brand names?
 
-2. **Target-structure gate**
+3. **Target-structure gate**
    - What is the canonical brand directory?
    - Where do approved masters live?
    - Where do generated candidates live?
    - Which files are safe to delete as rejected/legacy?
 
-3. **VI gate**
+4. **Strategy and VI gate**
+   - Who is the audience, what is the category, and what must the brand signal?
+   - What is known versus hypothesized?
    - What is the brand idea in one sentence?
    - What is the shape grammar?
    - What materials and palette are allowed?
    - What cultural tone should it carry?
    - What negative readings must be avoided?
 
-4. **DAG gate**
+5. **DAG gate**
    - Which assets must be generated before later assets can use them as references?
    - Which assets require consistency versus variety?
    - Which outputs are exploratory and which are production?
 
-5. **Consumption gate**
+6. **Consumption gate**
    - Which product files must change?
    - Which generated outputs must be rebuilt?
    - Which platform constraints apply?
 
-6. **Hygiene gate**
+7. **Specialist-handoff gate**
+   - Which outputs require legal, licensing, print, packaging, spatial, motion, sonic, or accessibility review?
+   - Are editable source files, measurements, tolerances, color standards, and acceptance criteria present?
+
+8. **Hygiene gate**
    - Are rejected assets gone?
    - Are old names/remotes/docs removed or intentionally preserved?
    - Are tests, build scripts, and visual checks complete?
@@ -59,5 +71,7 @@ A strong brand-kit pass usually creates or updates:
 - processed/exported production assets;
 - code/config integrations;
 - verification notes.
+
+Create an item-level deliverable matrix from `vi-deliverables.json`; do not replace it with broad category rows. For AI SaaS, distinguish corporate identity, communication identity, product identity, and AI trust identity. Use `external handoff` rather than fabricating professional sign-off.
 
 Keep documents factual enough for future agents to continue the work without asking why a visual decision was made.

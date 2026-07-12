@@ -1,4 +1,4 @@
-# generate-brand-kit Visual Identity
+# generate-brand-vi Visual Identity
 
 ## Core Idea
 
@@ -14,7 +14,7 @@ into a finished, consistent kit."
 
 ## Name and Voice
 
-- English name: generate-brand-kit
+- English name: generate-brand-vi
 - Short label: Brand Kit
 - Tagline: parts in, brand out.
 - Tone: engineering-first, calm, precise — a pipeline tool, not a design

@@ -1,5 +1,20 @@
 # Generation DAG Patterns
 
+## Built-in Backend
+
+Run brand DAGs through the bundled adapter:
+
+```bash
+python3 scripts/run_brand_image_dag.py --repo /path/to/project
+python3 scripts/run_brand_image_dag.py --repo /path/to/project --execute
+```
+
+The first command is a free dry-run. The second makes billed calls after approval.
+The adapter discovers a sibling or globally installed `generate-image`, defaults to
+`mox`, and lets that backend resolve the global `MOX_API_KEY`. Override discovery
+with `GENERATE_IMAGE_SKILL=/path/to/generate-image`; never pass the key on the
+command line.
+
 ## Recommended DAG
 
 1. **Foundation material board**
