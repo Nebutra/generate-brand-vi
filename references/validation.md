@@ -27,6 +27,14 @@ Do not delete code-level compatibility uses of `legacy` or third-party import na
 - Check light and dark backgrounds.
 - Confirm platform masking: if the OS supplies rounded corners, do not bake a large square field unless the platform requires it.
 - Confirm no suggestive/anatomical readings after scaling.
+- Run an unprompted five-second noun test with multiple viewers before sharing
+  the rationale. Record the first reading; do not negotiate with a collision.
+- Compare at least three structurally different black-and-white families before
+  approving a mark. Cosmetic variations do not count as separate families.
+- Place candidates in a category thumbnail neighborhood at 24-32 px and test
+  both similarity and disappearance into generic geometry.
+- Verify that the selected formal operation extends coherently into wordmark,
+  layout and motion. Reject one-off symbolic tricks.
 
 ## Selected-Kit Checks
 

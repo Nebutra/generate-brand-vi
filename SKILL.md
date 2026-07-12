@@ -32,31 +32,38 @@ Create brand systems that behave like water: take the shape of the project, prod
    - Write or update a `visual-identity.md` / `brand-vi-inventory.md` style document before mass generation.
    - Use `references/workflow.md` for the decision gates.
 
-4. **Design the generation DAG deliberately.**
-   - Prefer a serial DAG for consistency: foundation boards -> symbol motifs -> core mark -> production-clean mark -> variants -> product outputs -> proof sheets.
+4. **Derive mark form through operations, not pictograms.**
+   - Translate the business scenario into 2-4 tensions or relationships such as controlled/autonomous, local/distributed, continuous/reversible, open/bounded, or individual/system.
+   - Translate each relationship into formal operations: join, split, interrupt, offset, repeat, phase, fold, overlap, crop, counterform, shared axis, or controlled gap. Treat trend reports as an operation vocabulary, never as a style menu.
+   - Decide whether the identity should begin with a wordmark, monogram, symbol, or responsive family. Do not assume a standalone icon is required.
+   - Explore at least three structurally different families in black and white before selecting a direction. Run semantic-collision checks before adding color or material.
+   - Read the mark-form derivation and collision rules in `references/design-theory.md`.
+
+5. **Design the generation DAG deliberately.**
+   - Branch before convergence: strategy tensions -> operation studies -> three or more form families -> collision review -> one approved direction -> production-clean mark -> variants -> product outputs -> proof sheets.
    - Put shared references early in the DAG when object/shape consistency matters. Do not rely on prompt adjectives alone.
    - If the user rejects hard shape guides, make prompts explicit enough to constrain form, composition, material, and banned readings.
    - Use `references/generation-dag.md` and `references/prompt-patterns.md`.
 
-5. **Generate, judge, and promote assets.**
+6. **Generate, judge, and promote assets.**
    - Use the bundled adapter `scripts/run_brand_image_dag.py` for raster DAGs. It automatically discovers the sibling `generate-image` skill, defaults to its `mox` provider, and reads `MOX_API_KEY` through that backend. Do not ask the user to restate the path or credential setup.
    - Run the adapter without `--execute` first to show the prompt count and estimated billed cost. Use `--execute` only after the user approves the real generation.
    - Set `GENERATE_IMAGE_SKILL` only when auto-discovery cannot locate the backend. Do not copy credentials or vendor a second generate-image implementation into this skill.
    - Promote only approved masters into an `approved/` or equivalent stable directory.
    - Keep rejected explorations out of the product path; remove or quarantine them so future agents cannot accidentally consume them.
 
-6. **Convert into production-ready assets and handoffs.**
+7. **Convert into production-ready assets and handoffs.**
    - Hand-vectorize or edit SVG for production marks when raster output is not enough.
    - Export all required bitmap sizes and platform formats. Use existing repo icon scripts when present.
    - For desktop icons, verify alpha/transparent intent; for mobile icons, respect platform-specific opaque/adaptive requirements.
    - Produce editable templates and specifications where supported. For trademark clearance, font licensing, print proofs, packaging dielines, environmental engineering, original music, and construction files, create a precise external-handoff brief unless qualified tooling and source data are available.
 
-7. **Integrate and verify.**
+8. **Integrate and verify.**
    - Replace source assets, generated assets, app config references, in-app components, documentation, and localized product names.
    - Run relevant asset scripts, type checks, tests, JSON validation, image/file checks, and legacy scans.
    - Visually inspect critical assets in context, especially dock/app icons and first-run/empty states.
 
-8. **Commit only after hygiene.**
+9. **Commit only after hygiene.**
    - Scan for legacy names, rejected paths, stale generated outputs, and old remote/upstream references when a full brand migration is requested.
    - If committing, stage only intended files and summarize verification honestly.
 
@@ -86,3 +93,5 @@ Create brand systems that behave like water: take the shape of the project, prod
 - Do not introduce a landing-page aesthetic into operational software unless the product surface actually calls for it.
 - Do not present strategy hypotheses as research, trademark searches as legal opinions, screen color as a print proof, concept packaging as a production dieline, or environment mockups as construction drawings.
 - Do not use one-off image outputs as final vectors when the repo needs SVG or platform icon formats.
+- Do not encode a product noun, feature, or metaphor as a literal pictogram merely because it is easy to prompt. Formal relationships must survive without the explanatory story.
+- Do not allow a single generated core-mark candidate to become the parent of downstream assets before a human collision review approves it.

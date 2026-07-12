@@ -21,26 +21,34 @@ command line.
    - Palette, material, lighting, texture, cultural mood.
    - No logo or text.
 
-2. **Symbol motif sheet**
-   - Small visual metaphors derived from the philosophy.
-   - Establish shape vocabulary and negative constraints.
+2. **Strategy tension sheet**
+   - State 2-4 business relationships without drawing product nouns.
+   - Map each relationship to candidate formal operations.
 
-3. **Core mark seed**
-   - One primary logo direction.
-   - Use foundation/motif references when consistency is needed.
+3. **Parallel operation families**
+   - Generate at least three independent black-and-white families.
+   - Each family uses one invariant operation across wordmark, symbol, layout and motion.
 
-4. **Production-clean mark**
+4. **Collision and neighborhood proof**
+   - Test unprompted readings, category similarity and 16-48 px behavior.
+   - Reject familiar-object sinks before downstream generation.
+
+5. **Human selection gate**
+   - Approve one family or return to the operation branches.
+   - No Hero, social, app icon or materialized mark may start before this gate.
+
+6. **Production-clean mark and wordmark**
    - Simplify the seed for legibility and vectorization.
    - Strengthen silhouette and small-size behavior.
 
-5. **App icon variants**
+7. **App icon variants**
    - Classic, soft/lifestyle, technical/high-contrast, monochrome glyph.
    - Preserve the approved mark; vary only material and environment.
 
-6. **Proof sheets**
+8. **Proof sheets**
    - Small-size legibility, light/dark backgrounds, icon family contact sheet.
 
-7. **Backgrounds and scenes**
+9. **Backgrounds and scenes**
    - Hero, social, onboarding, documentation.
    - Use the same approved mark/material references; do not let backgrounds invent new logos.
 
@@ -50,6 +58,8 @@ command line.
 - Use image edit/reference inputs for shape consistency when available.
 - If using prompt-only generation, explicitly constrain silhouette, composition, forbidden forms, material, lighting, and output intent.
 - Promote approved masters to `approved/`; never make downstream tasks depend on exploratory folders.
+- Do not use a purely serial mark pipeline before approval; one weak semantic
+  decision will contaminate every descendant while appearing visually consistent.
 
 ## Negative Constraints
 

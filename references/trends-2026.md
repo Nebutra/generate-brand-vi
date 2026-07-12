@@ -6,6 +6,16 @@ per Romaniuk, distinctive assets are built by consistency over years, so
 pick trend alignment deliberately and expect it to age.
 Sources verified 2026-07; re-check annually against the resources below.
 
+## How to use trend reports
+
+Treat named trends as a vocabulary of formal operations, not a menu of brand
+concepts. `Crack`, `Open Axis`, `Echo Arcs`, `Phasers`, `Roll Over`, `Slash Bar`
+and similar labels describe transformations such as interruption, retained gap,
+repetition, sequencing, folding and directional cutting. Extract the operation,
+then test whether it expresses a project-specific relationship. Never choose a
+trend because its example logos look current, and never combine several trend
+signatures into one mark merely to appear contemporary.
+
 ## Macro-currents
 
 - **Motion is the 2026 macro-trend.** LogoLounge's 2026 report (30,000+

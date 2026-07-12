@@ -11,14 +11,29 @@ Palette: <named colors>. Lighting: <direction/quality>.
 Design feeling: <era/product/culture>. No text, no logo, no watermark.
 ```
 
-## Core Mark Prompt
+## Form-Family Study Prompt
 
 ```text
-Design the primary <brand> logo mark using the referenced material board.
-Create <one clear shape> with <one clear signal>.
-The outer form should feel <emotional/material qualities>; the inner signal should feel <technical/precise qualities>.
-Use <palette/material/lighting>. Centered, vector-friendly, readable at <small size>.
-Avoid <specific old shape/readings>. No text except intentional symbol, no mascot, no watermark.
+Create a black-and-white identity study for <brand>, not a finished logo.
+Business tension: <force A> versus/with <force B>.
+Explore one formal operation only: <split/join/offset/phase/fold/repeat/shared-axis/etc>.
+Apply it consistently to one wordmark fragment, one monogram or symbol, one
+layout motif, and one motion keyframe sequence. Show construction relationships,
+not materials or mockups. Avoid literal pictograms and these semantic
+collisions: <specific nouns/category clichés>. No gradients, effects or generated prose.
+```
+
+Run this prompt separately for at least three operations. Do not ask one
+generation to produce a random logo grid; each family needs a stated invariant.
+
+## Approved Direction Prompt
+
+```text
+Refine the approved <brand> form family governed by <operation>.
+Preserve these invariants: <geometry/spacing/relationship>.
+Remove incidental object readings identified in review: <collisions>.
+Produce a black-and-white primary mark and wordmark relationship at 16, 24,
+32 and 48 px. No material, mockup, gradient, lighting or extra symbol.
 ```
 
 ## Production Icon Prompt
@@ -57,3 +72,7 @@ no generated text.
 - State what must stay fixed and what may vary.
 - Use “not a logo” for foundation boards to prevent premature marks.
 - Use “approved mark” for downstream outputs to prevent drift.
+- Never include a concrete object metaphor unless the brand is intentionally
+  pictorial and collision review has approved that object.
+- Prefer verbs and spatial relationships over nouns: interrupt, align, retain,
+  reverse, attenuate, branch, rejoin, offset, phase and contain.

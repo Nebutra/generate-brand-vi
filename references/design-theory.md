@@ -54,6 +54,46 @@ measured on **Fame** (% who link the asset to you) and **Uniqueness**
   Janoff drew it freehand). Grids are for optical refinement, not proof of
   quality; successful marks are often deliberately not geometrically precise.
 
+## Form derivation: meaning to relationship to operation
+
+Do not jump from a positioning sentence directly to a symbol. That shortcut
+usually produces a category pictogram: security becomes a lock, AI becomes a
+sparkle, speed becomes an arrow, trust becomes a shield, access becomes a
+keyhole. Instead use this chain:
+
+1. **Business truth:** what job or consequence is distinctive?
+2. **Relationship/tension:** what opposing or cooperating forces define it?
+3. **Formal behavior:** how would those forces act in two dimensions?
+4. **Operation:** which repeatable transformation creates that behavior?
+5. **Family:** how does the operation work across wordmark, symbol, motion and layout?
+
+Example tensions include autonomous/controlled, open/bounded,
+continuous/reversible, local/distributed, individual/system and
+proposal/approval. Useful operations include:
+
+- join, knot, interlock and shared-axis approach;
+- split, crack, interrupt, crop and controlled gap;
+- offset, phase, echo, repeat and progressive sequence;
+- fold, roll, overlap, counterform and figure-ground exchange;
+- slant, compress, extend, splice and custom terminal behavior in a wordmark.
+
+Operations are not concepts by themselves. A trend report can supply an
+operation vocabulary, but the chosen operation must express the project's
+specific relationship and remain useful after the trend ages.
+
+## Explore families before convergence
+
+- Start in black and white; do not use material, glow or gradients to rescue weak form.
+- Produce at least three structurally different families, not three cosmetic variations.
+- Include a wordmark-led family whenever the name is distinctive and still building awareness.
+- Include a counterform family only when the negative shape has no dominant unintended reading.
+- Include a system/motion family when the product's identity is behavioral rather than object-like.
+- Stop the DAG at a human gate before Hero, social or icon descendants inherit a mark.
+
+For each family, record its source tension, formal operation, invariant
+geometry, allowed variation, small-size behavior, likely category collisions
+and banned readings.
+
 ## Verification battery (apply to every candidate)
 
 1. **Shrink test:** legible at 32 px; survives 16 px favicon; key elements
@@ -67,6 +107,15 @@ measured on **Fame** (% who link the asset to you) and **Uniqueness**
    not loose swatches. https://colorarchive.org/guides/color-contrast-accessibility-guide/
 6. **One-sentence test:** the mark's idea can be stated in one sentence
    grounded in the business scenario.
+7. **No-story test:** show the mark without its rationale. If it becomes a
+   familiar object or category cliché, the rationale does not save it.
+8. **Five-second collision test:** ask independent viewers what they see first.
+   Record nouns before explaining the brand. Locks, shields, eyes, people,
+   letters, body parts and known app/category icons are common accidental sinks.
+9. **Thumbnail neighborhood test:** place the candidate among 20 category marks
+   at 24-32 px. Reject both lookalikes and forms that disappear into generic geometry.
+10. **Operation integrity test:** verify that one clear formal operation governs
+    wordmark, icon, layout and motion rather than a one-off symbolic trick.
 
 ## Verbal identity
 
