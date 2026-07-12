@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create a neutral brand-kit scaffold for a repository."""
+"""Create a production-oriented brand-VI scaffold for a repository."""
 
 from __future__ import annotations
 
@@ -9,6 +9,7 @@ from pathlib import Path
 
 
 CATALOG_PATH = Path(__file__).resolve().parent.parent / "references" / "vi-deliverables.json"
+ROUTING_PATH = Path(__file__).resolve().parent.parent / "references" / "production-routing.json"
 HANDOFF_MODULES = {"b3", "b6", "b7", "b9", "b10", "b11", "b12"}
 
 
@@ -21,6 +22,68 @@ def write(path: Path, content: str, force: bool) -> None:
 
 def load_catalog() -> dict:
     return json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
+
+
+def load_routing() -> dict:
+    return json.loads(ROUTING_PATH.read_text(encoding="utf-8"))["routes"]
+
+
+def production_plan(
+    brand: str,
+    profile: str,
+    selected_modules: list[str],
+    catalog: dict,
+    routing: dict,
+) -> str:
+    items = [
+        {
+            "id": "strategy-001",
+            "module": "cross-system",
+            "deliverable": "Brand strategy, evidence labels, architecture, naming and verbal identity",
+            "phase": "strategy",
+            "producer": "strategy-document",
+            "output": "visual-identity.md",
+            "blocked_by": [],
+            "status": "ready",
+            "acceptance": "Evidence levels are explicit and strategy-approved gate is recorded",
+        }
+    ]
+    for module in selected_modules:
+        route = routing[module]
+        gates = [gate for gate in route["gate"].split("+") if gate]
+        for index, deliverable in enumerate(catalog["modules"][module]["items"], start=1):
+            items.append(
+                {
+                    "id": f"{module}-{index:02d}",
+                    "module": module,
+                    "system": catalog["modules"][module]["name"],
+                    "deliverable": deliverable,
+                    "phase": route["phase"],
+                    "producer": route["producer"],
+                    "output_kind": route["output"],
+                    "output": f"deliverables/{module}/{module}-{index:02d}",
+                    "blocked_by": gates,
+                    "creates_gate": route.get("creates_gate"),
+                    "status": "planned",
+                    "acceptance": "TBD before production",
+                }
+            )
+    plan = {
+        "schema_version": 1,
+        "brand": brand,
+        "starting_profile": profile,
+        "selected_modules": selected_modules,
+        "mode": "production",
+        "definition_of_done": ["complete", "blocked", "not-applicable", "external-handoff"],
+        "gates": {
+            "strategy-approved": {"status": "pending", "blocks_only_declared_items": True},
+            "mark-approved": {"status": "pending", "blocks_only_declared_items": True},
+            "production-inputs": {"status": "pending", "blocks_only_declared_items": True},
+            "evidence-available": {"status": "pending", "blocks_only_declared_items": True},
+        },
+        "items": items,
+    }
+    return json.dumps(plan, ensure_ascii=False, indent=2) + "\n"
 
 
 def inventory_template(
@@ -40,7 +103,7 @@ def inventory_template(
                 f"| {module.upper()} | {definition['name']} | {item} | required | {delivery} | planned | TBD |"
             )
     deliverable_rows = "\n".join(rows) or "| - | - | No modules selected | not applicable | - | - | - |"
-    return f"""# {brand} Brand Kit Inventory
+    return f"""# {brand} Brand VI Inventory
 
 ## Brand Philosophy
 
@@ -128,46 +191,41 @@ def vi_template(brand: str, philosophy: str) -> str:
 
 
 def dag_template(brand: str) -> str:
-    return f"""# {brand} brand generation DAG
+    return f"""# {brand} mark exploration DAG
 
 tasks:
-  - id: foundation-material-board
-    name: 01-foundation-material-board
+  - id: operation-family-1
+    name: 01-operation-family-1
     ratio: "16:9"
     prompt: >-
-      Create a {brand} material and palette reference board, not a logo.
-      Show the brand materials, colors, lighting, and cultural mood. No text,
-      no logo, no watermark.
+      Create a black-and-white identity family study for {brand}. Start from
+      one explicit business tension and one formal operation. Apply the same
+      invariant to a wordmark, symbol, layout motif, and motion keyframes.
+      Avoid literal pictograms, color, material, effects, and mockups.
 
-  - id: core-mark-seed
-    name: 02-core-mark-seed
-    ratio: "1:1"
-    refs: ["@foundation-material-board"]
+  - id: operation-family-2
+    name: 02-operation-family-2
+    ratio: "16:9"
     prompt: >-
-      Design the primary {brand} mark using the referenced material board.
-      Create one clear silhouette and one clear product signal. Centered,
-      vector-friendly, readable at small size, no old brand mark, no watermark.
+      Create a second structurally distinct black-and-white identity family for
+      {brand}, governed by a different formal operation. Include wordmark,
+      symbol, layout motif, and motion keyframes. No cosmetic variation of the
+      first family, no literal pictogram, color, material, effects, or mockup.
 
-  - id: production-icon
-    name: 03-production-icon
-    ratio: "1:1"
-    refs: ["@core-mark-seed"]
+  - id: operation-family-3
+    name: 03-operation-family-3
+    ratio: "16:9"
     prompt: >-
-      Convert the approved {brand} mark into a production app icon. Preserve
-      the mark relationship, adapt only material/depth/platform output needs.
-
-  - id: legibility-proof
-    name: 04-legibility-proof
-    ratio: "1:1"
-    refs: ["@production-icon"]
-    prompt: >-
-      Create a small-size legibility proof sheet on light and dark backgrounds.
-      No labels, no fake text, no watermark.
+      Create a third structurally distinct black-and-white identity family for
+      {brand}, governed by another formal operation. Include wordmark, symbol,
+      layout motif, and motion keyframes. No random logo grid, literal pictogram,
+      color, material, effects, or mockup.
 """
 
 
 def main() -> int:
     catalog = load_catalog()
+    routing = load_routing()
     profiles = sorted(catalog["profiles"])
     modules = sorted(catalog["modules"])
     parser = argparse.ArgumentParser(description=__doc__)
@@ -222,7 +280,12 @@ def main() -> int:
         args.force,
     )
     write(out / "visual-identity.md", vi_template(args.brand, args.philosophy), args.force)
-    write(out / "brand-vi-generation-dag.yaml", dag_template(args.brand), args.force)
+    write(
+        out / "brand-vi-production-plan.json",
+        production_plan(args.brand, args.profile, selected_modules, catalog, routing),
+        args.force,
+    )
+    write(out / "mark-exploration-dag.yaml", dag_template(args.brand), args.force)
     print(out)
     return 0
 

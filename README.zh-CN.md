@@ -106,7 +106,7 @@ python3 scripts/run_brand_image_dag.py --repo . --execute
 # 盘点现有品牌表面（旧品牌迁移场景）
 python3 scripts/scan_brand_assets.py . --brand-term 旧名 --brand-term 新名
 
-# 脚手架：approved/ generated/ processed/ + VI、清单、DAG 模板
+# 脚手架：VI、逐项生产计划、清单和标志探索 DAG
 python3 scripts/create_brand_vi_scaffold.py --brand MyProduct \
   --philosophy "整套识别都必须表达的那一句话" \
   --profile industrial \
@@ -118,6 +118,8 @@ AI SaaS 产品从 `--profile ai-saas` 开始，再删掉产品实际不消费的
 
 agent 会填充模板、用可用的生图工具执行 DAG，并且只把批准的母版
 晋升到产品路径。
+生产请求以 `brand-vi-production-plan.json` 为准：标志被拒绝只阻塞依赖
+标志的条目，基础系统和独立产品系统继续执行。
 对于商标法律意见、印刷打样、供应商刀版、空间工程、施工图和原创声音版权，
 skill 会生成明确的外部专业交接说明，而不会冒充已经获得专业审批。
 

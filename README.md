@@ -110,7 +110,7 @@ Or seed the structure by hand first:
 # inventory existing brand surfaces (old-brand migration)
 python3 scripts/scan_brand_assets.py . --brand-term oldname --brand-term newname
 
-# scaffold approved/ generated/ processed/ + VI, inventory, and DAG templates
+# scaffold VI, item-level production plan, inventory, and mark exploration DAG
 python3 scripts/create_brand_vi_scaffold.py --brand MyProduct \
   --philosophy "one line that the whole identity must express" \
   --profile industrial \
@@ -123,6 +123,9 @@ actual product does not consume.
 
 The agent fills the templates, runs the DAG with whatever image-generation
 tool is available, and promotes only approved masters into product paths.
+For a production request, `brand-vi-production-plan.json` is authoritative:
+mark rejection blocks only mark-dependent items while independent foundations
+and product-system deliverables continue.
 For trademark clearance, press proofs, supplier dielines, spatial engineering,
 construction drawings, and original audio rights, it produces an explicit
 external-handoff brief instead of claiming professional approval.

@@ -22,6 +22,7 @@ Create brand systems that behave like water: take the shape of the project, prod
    - Consider A1-A5 foundations, B1-B13 physical/application modules, and C1-C14 AI SaaS product/trust modules. AI SaaS modules cover product identity, AI disclosure, runtime states, prompts, evidence, safety, privacy, developer experience, lifecycle, enterprise trust, provenance, accessibility, ecosystem architecture, motion, and sonic behavior.
    - Use `references/asset-taxonomy.md` for common slots and sizes.
    - Identify build commands and generated outputs. Do not replace only the visible logo while leaving compiled assets stale.
+   - When the user asks to produce or deliver a VI, compile the selected items into `brand-vi-production-plan.json` using `references/production-routing.json`. Every item needs a producer, output, dependency gate, status, and acceptance check.
 
 3. **Distill strategy and philosophy into VI rules.**
    - Establish the evidence level: supplied facts, repo evidence, stakeholder hypothesis, or research-backed finding. Do not invent market research or claim legal clearance.
@@ -51,6 +52,7 @@ Create brand systems that behave like water: take the shape of the project, prod
    - Set `GENERATE_IMAGE_SKILL` only when auto-discovery cannot locate the backend. Do not copy credentials or vendor a second generate-image implementation into this skill.
    - Promote only approved masters into an `approved/` or equivalent stable directory.
    - Keep rejected explorations out of the product path; remove or quarantine them so future agents cannot accidentally consume them.
+   - A rejected mark blocks only tasks declaring `mark-approved`. Continue strategy, verbal identity, typography, color, tokens, AI product patterns, accessibility, trust and governance work that does not depend on the mark.
 
 7. **Convert into production-ready assets and handoffs.**
    - Hand-vectorize or edit SVG for production marks when raster output is not enough.
@@ -75,6 +77,8 @@ Create brand systems that behave like water: take the shape of the project, prod
 - `references/workflow.md`: detailed process, decision gates, and “water-shape” interpretation.
 - `references/asset-taxonomy.md`: product-consumable asset checklist.
 - `references/vi-deliverables.json`: machine-readable A1-B13 deliverable catalog and composable scene profiles.
+- `references/production-routing.json`: producer, output, phase, and gate routing for every A/B/C module.
+- `references/production-contract.md`: definition of done and resumable gate semantics for full production requests.
 - `references/generation-dag.md`: DAG design and consistency patterns.
 - `references/prompt-patterns.md`: prompt architecture for professional visual generation.
 - `references/validation.md`: QA, integration, and legacy cleanup checks.
@@ -95,3 +99,4 @@ Create brand systems that behave like water: take the shape of the project, prod
 - Do not use one-off image outputs as final vectors when the repo needs SVG or platform icon formats.
 - Do not encode a product noun, feature, or metaphor as a literal pictogram merely because it is easy to prompt. Formal relationships must survive without the explanatory story.
 - Do not allow a single generated core-mark candidate to become the parent of downstream assets before a human collision review approves it.
+- Do not report exploration images as a delivered Brand VI. A production request ends only with item-level `complete`, `blocked`, `not-applicable`, or `external-handoff` status.
