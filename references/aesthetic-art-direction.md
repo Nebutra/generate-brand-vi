@@ -1,7 +1,32 @@
 # Aesthetic & Art-Direction Operating System
 
 > **Why this document exists:**
-> Strategic correctness, modular coverage, and zero-drift fidelity bring a brand identity to **60/100 (engineering compliance)**. Moving from **60 → 100 (agency/monograph-grade taste)** requires mastering five concrete aesthetic disciplines grounded in *Emil Ruder*, *Josef Müller-Brockmann*, *Massimo Vignelli*, *Kenya Hara*, *Fedrigoni/Takeo* materiality, *Tokyo TDC*, *D&AD*, and studio art direction (*Pentagram, Koto, Collins, Mouthwash Studio, Kurppa Hosk*).
+> Strategic correctness, modular coverage, and zero-drift fidelity bring a brand identity to **60/100 (engineering compliance)**. Moving from **60 → 100 (agency/monograph-grade taste)** requires mastering **two strictly separated layers** so you NEVER fall into the **"Seesaw Overcorrection Trap"** (swinging blindly from cheap cyberpunk neon into warm beige linen/Songti womenswear costumes):
+>
+> - **Layer A · Universal Craft Invariants (Domain-Independent):** Delivery purity, breathing negative space, readable typographic scale, rhythmic spread pacing, physical/optical believability, and orthogonal multi-hop DAG discipline.
+> - **Layer B · Subject-Native Aesthetic Register (100% Derived From Domain Reality):** Typography skeleton, chromatic temperature, lighting color temperature, physical material vocabulary, and layout grammar MUST match the entity's actual industry, habitat, and cultural register — verified ruthlessly by the **1-Second Blind Category-Read Test**.
+
+---
+
+## 0. Anti-Seesaw Law: Universal Craft vs. Subject-Native Register
+
+**NEVER hardcode one single aesthetic skin** (neither "cyberpunk dark neon" nor "Kinfolk beige linen + travertine + Songti/serif + golden sunset light") as a universal definition of "good taste." Applying a warm cotton/terracotta/Songti fashion-monograph aesthetic to a frontier IT / computing / hardware company causes **fatal Category-Register Dissonance (气质错位)** — even if the lighting is gorgeous.
+
+Before locking any color, font, light study, or mockup, explicitly calibrate all **5 Subject-Native Register Axes** from the brand's real world:
+
+| Register Axis | Tech / Software / Computing / Industrial Engineering *(Braun · IBM · Pentagram Tech · Linear · Vercel · Teenage Engineering)* | Fashion / Luxury / Craft / Cultural / Hospitality *(Aesop · ICICLE · Kinfolk · Tokyo TDC Publishing)* | Consumer / Media / Civic / Dynamic Systems *(Collins · Studio Dumbar · Koto · ABCD)* |
+| --- | --- | --- | --- |
+| **1. Typographic Skeleton** | **Precision Neo-Grotesk / Geometric Sans + Technical Mono** (*Neue Haas Grotesk / Inter / Geist / DIN* + crisp modern **Hei-ti / 无衬线黑体**). Never default to high-contrast Songti or flared fashion serifs unless an explicit literary thesis demands it. | High-contrast Song/Ming, sculpted flared editorial serifs, refined calligraphic stroke tension. | Expressive variable display grotesks, bold condensed poster type, bespoke modular display forms. |
+| **2. Chromatic Temperature & Signal Physics** | **Crisp architectural neutrality** (technical white `#FFFFFF`, cool alabaster `#F5F7FA`, anodized silver `#E4E8EE`, carbon obsidian `#0E1116`) + **ONE calibrated engineered functional signal accent** (e.g., Braun signal vermilion, optical cobalt, instrument teal) — never muddy earth-tone beige/terracotta AND never cheap glowing purple-blue AI gradients. | Unbleached cotton, mineral clay, terracotta, celadon/sage, warm limestone, deep espresso-umber ink. | Intentional bold pigment contrast calibrated to cultural energy without neon visual fatigue. |
+| **3. Lighting & Lens Temperament** | **Crisp cool-neutral architectural daylight or Swiss industrial softbox (`5200K–5800K`)**, clean glass/concrete/metal specular honesty, crisp directional geometry — zero nostalgic amber golden-hour sunset filters. | Warm golden window sunlight (`3200K–3800K`), soft dappled shadows, subtle analog film warmth. | Crisp editorial daylight, flash-editorial clarity, or controlled studio color blocking matching medium. |
+| **4. Physical Material Vocabulary** | Bead-blasted anodized aluminum, matte brushed steel, architectural fair-faced concrete (`清水混凝土`), clear low-iron glass, crisp ultra-white 350–400gsm technical stock (*Mohawk Superfine Ultra White / Takeo NT Rasha*), precision-milled matte polymers. | Deckle-edge cotton rag, woven bookcloth, raw organic canvas, Roman travertine, linen apparel, stoneware. | Corrugated/molded sustainable boards, coated poster stocks, polycarbonate, textile prints, screen surfaces. |
+| **5. Editorial Layout Grammar** | **Swiss International Typographic Style** (*Josef Müller-Brockmann / Karl Gerstner / Dieter Rams*): crisp hairline rules, left-aligned modular grids, bold Neo-Grotesk scale contrast, monospaced index coordinates. | Poetic literary pacing, wide romantic margins, quiet centered or classical asymmetric book spreads. | Kinetic modular grid, bold typographic posters, high-contrast modular rhythm. |
+
+### Mandatory Private Gate · The "1-Second Blind Category-Read Test" (盲测行业气质检验)
+Before fanning out mockups or compiling a Brand Book, mentally **cover the company name** and inspect the palette, Chinese/Latin font pairing, lighting temperature, paper/metal substrates, and layout rhythm:
+- **Ask:** *"If 10 senior creative directors saw ONLY these visual elements for 1 second, what industry would they immediately guess?"*
+- If a Shenzhen computing / IT / software company reads as *"womenswear / tea house / ceramics / boutique hotel"* → **INSTANT HARD REJECT**; recalibrate all 5 Register Axes from first principles.
+- **True Meta-Taste = Layer A (Universal Craft Rigor) × Layer B (Exact Subject-Native Register).**
 
 ---
 
@@ -37,24 +62,24 @@ Maintain an **impenetrable firewall** between internal evaluation criteria / eng
 
 ---
 
-## 3. Editorial Pigment & Substrate Physics (Kill Cheap Digital RGB)
+## 3. Calibrated Color & Physical Material Honesty (Kill Cheap Digital RGB Without Defaulting to Beige)
 
-Why do AI-generated palettes frequently look cheap or "2018 CGI tech render"? Because they default to **backlit, max-saturation digital sRGB primaries** (`#0047FF`, `#FF0000`, `#00FF00`) and luminous neon glows:
+Why do AI-generated palettes frequently look cheap or "2018 CGI tech render"? Because they default to **backlit, uncalibrated neon digital gradients** (`#0047FF → #A855F7`) and glowing halos — **NOT** because crisp whites, cool architectural greys, deep carbon blacks, or bold Swiss signal colors are bad!
 
-- **Pigment Complexity Over Raw RGB Primaries:** Pull back from 100% digital saturation. Introduce subtle mineral, earth, or ink undertones (e.g., *deep ultramarine / Prussian ink / cobalt pigment* instead of electric `#0047FF`; *warm carbon / deep umber-black / basalt* instead of sterile `#000000`; *unbleached cotton / warm limestone / OBA-free archival stock* instead of glaring `#FFFFFF`).
-- **Tonal Harmony:** Give the entire palette a shared atmospheric denominator (a unifying cool-mineral or warm-paper undertone) so colors converse quietly rather than vibrating harshly against one another.
-- **Light Absorption Over Light Emission:** Real physical print and objects *absorb and diffuse* ambient light. Favor matte uncoated cotton stocks (*Fedrigoni*, *Takeo* pulp-dyed papers), soft ink feathering into paper grain, blind debossing, and matte bead-blasted finishes over plastic specular shine or glowing backlit edges.
+- **Calibrated Pigment / Industrial Finish Over Raw Neon Slop:** Match chromatic temperature strictly to Layer B (Section 0). A precision tech/industrial brand thrives on **crisp technical white (`#FFFFFF` / `#F5F7FA`), anodized silver-grey, deep carbon obsidian (`#0E1116`), and ONE surgical engineered signal hue** (e.g., *Dieter Rams Signal Vermilion* `#E5481B` or *Precision Optical Cobalt*); a craft/fashion/hospitality brand thrives on warm mineral/earth pigments (*unbleached cotton, clay, espresso umber*).
+- **Tonal Discipline & Proportions:** Give the palette an unmistakable dominant ground (60–70%), a structural neutral secondary (15–20%), an authoritative primary ink (10–15%), and restrained functional signal accent (3–8%). Never let all colors shout at equal saturation.
+- **Physical Surface Honesty Over Fake Backlit Gloss:** Whether working in bead-blasted anodized aluminum, fair-faced concrete, bright-white uncoated technical paper, or tactile cotton bookcloth, surfaces must obey real light physics (true micro-grain, realistic specular rolloff, crisp deboss/etching tolerances) rather than glowing CGI plastic.
 
 ---
 
 ## 4. Art-Directed Studio Photography & Mockup Realism
 
-Escape the **3 fatal signatures of "cheap AI mockups"** (*AI Glow*, *Sterile Centered Symmetry*, and *Waxy CGI Perfection*) using studio art-direction physics (*Pentagram / Koto / Collins / Mouthwash Studio / Kurppa Hosk*):
+Escape the **3 fatal signatures of "cheap AI mockups"** (*AI Glow*, *Sterile Centered Symmetry*, and *Waxy CGI Perfection*) using studio art-direction physics calibrated strictly to the brand's native world:
 
 | Fatal AI Mockup Cliché (BAN!) | Art-Directed Studio Standard (ENFORCE!) |
 |---|---|
-| **Fake "AI Glow" & Neon Rim Light** (glowing blue/purple edges on black, laser lines across desks, omnipresent softbox glow) | **Single-Source Physical Daylight:** Natural window raking light, overcast architectural skylight, realistic soft shadow fall-off, true color bounce off adjacent surfaces, and deep ambient occlusion in crevices. |
-| **Waxy Smooth CGI Shader Surfaces** & **2×2 Fake 3D Material Grids** | **Tactile Friction & Micro-Imperfection:** Uncoated paper fiber tooth, ink slightly absorbed into textured stock, natural linen weave, subtle matte metal micro-patina, faint surface grain, photographed as *real physical objects* — never sterile 2×2 C4D shader cubes. |
+| **Fake "AI Glow" & Neon Rim Light** (glowing blue/purple edges on black, laser lines across desks, omnipresent softbox glow) | **Physically Motivated Directional Light Matching Register:** Crisp `5200K–5800K` north-facing architectural daylight or industrial studio softbox for tech/engineering; warm `3200K–3800K` window sunlight for craft/fashion — always with true shadow fall-off, natural bounce, and real ambient occlusion. |
+| **Waxy Smooth CGI Shader Surfaces**, **2×2 Fake 3D Material Grids**, OR **Category-Wrong Props** (e.g. linen shirts & teacups for a computing company) | **Domain-Authentic Tactile Precision:** Bead-blasted anodized aluminum, matte concrete, crisp bright-white heavy technical card stock, ballistic nylon & glass for precision tech; cotton rag, linen, travertine for fashion/craft — always photographed as *real physical objects* with genuine tolerances and micro-grain. |
 | **Infinite Razor-Sharp Focus & Dead-Center Catalog Symmetry** (4 parallel rectangles aligned to frame edges like a Canva template) | **Optical Lens Realism & Editorial Framing:** Prime lenses (`50mm` / `85mm` at `f/2.0–f/2.8`) with organic shallow depth-of-field bokeh; off-axis angles, bold asymmetric cropping where objects bleed gracefully past the frame edge, and candid human/architectural presence (e.g., a hand holding a card or turning a page). |
 | **Crowded Multi-Object Product Dumps** (jamming 5–7 products onto one tabletop) | **One Hero Story Per Frame:** Give each physical artifact its own quiet, atmospheric scene; vary camera distance across the showcase (wide architectural context → medium editorial story → intimate tactile macro close-up). |
 
