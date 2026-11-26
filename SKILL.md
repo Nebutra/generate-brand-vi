@@ -36,11 +36,11 @@ Create brand systems that behave like water: take the shape of the project, prod
    - Write or update a `visual-identity.md` / `brand-vi-inventory.md` style document before mass generation.
    - Use `references/workflow.md` for the decision gates.
 
-4. **Derive iconic mark architecture — never generic 2-piece tangram clipart.**
+4. **Derive iconic mark architecture via an Autonomous Top-Agency "90+ Pool" Loop.**
    - Read `references/logo-craft-and-aesthetics.md` and `references/design-theory.md` before exploring any mark.
    - Explore across genuinely distinct **iconic mark archetypes** — (1) Pure Sculptural Wordmark / Optical-Quirk Logotype (no gratuitous abstract icon!), (2) Monogram / Rotational Ambigram / Letter-Fused Wit, (3) Topological Interlock / Op-Art Continuity, (4) Heraldic Radial / *Kamon* Crest — rather than 6 variations of sliced squares or parallelograms.
-   - Lock the mark in **pure single-color monochrome** first (banning 2-color patchwork splits on weak shapes). Apply the Fiverr/Clipart Kill Test ruthlessly: if no candidate on a board reaches genuine museum/studio caliber, **reject the entire board** and rethink the structural hook.
-   - Always pause for **human logo approval** before running downstream photography, mockups, or book assembly.
+   - Lock the mark in **pure single-color monochrome** first (banning 2-color patchwork splits on weak shapes).
+   - **Autonomous Executive Creative Director (ECD) Gate (No Human in the Loop by default):** Unless the user explicitly requests step-by-step co-review, do NOT stop after rough Round 1 boards to ask the user to pick or approve Step 2. Score every candidate privately on the 100-point rubric in `references/logo-craft-and-aesthetics.md`; **NEVER pick a 60-point logo out of 30-point drafts.** Hard-reject mediocre boards, pivot archetypes, and run refinement sprints until you have a genuine **90+ finalist pool**, select the strongest 90+ master, lock clean opaque masters + `.svg` vectors, and immediately drive the rest of the agency pipeline (anchors → touchpoints → monograph book → final visual PDF audit) autonomously to finished delivery.
 
 5. **Design the generation DAG deliberately.**
    - Branch before convergence: strategy tensions -> operation studies -> three or more form families -> collision review -> one approved direction -> production-clean mark -> variants -> product outputs -> proof sheets.
@@ -49,7 +49,7 @@ Create brand systems that behave like water: take the shape of the project, prod
    - Compile related prompts from one stable contract: invariant lock, explicit reference roles, one variation mechanism, scene constraints, and targeted negative constraints. Convert style labels into observable layout, color, process, surface, and boundary rules.
    - Write `brand-image-spec.json`, then run `scripts/compile_brand_image_dag.py --stage exploration`. Generate one isolated symbol or one isolated wordmark per node; do not mix unsettled marks, alphabets, applications, or mockups on a board.
    - Add project-specific pad images only through `explorationReferences` entries with explicit `path`, `role`, and prohibited contribution. References may teach composition, craft, or typography; they must not silently donate another brand's identity.
-   - Stop at human approval. Recompile with `--stage production --approved-symbol ... --approved-wordmark ...` only after canonical masters are selected. Never place downstream production tasks behind an unapproved candidate.
+   - Pass the internal ECD 90+ Gate (or explicit human review when requested by the user) before recompiling with `--stage production --approved-symbol ... --approved-wordmark ...`. Never place downstream production tasks behind an unverified or sub-90 candidate.
    - If the user rejects hard shape guides, make prompts explicit enough to constrain form, composition, material, and banned readings.
    - Use `references/generation-dag.md` and `references/prompt-patterns.md`.
 
@@ -127,7 +127,7 @@ Create brand systems that behave like water: take the shape of the project, prod
 - Do not present strategy hypotheses as research, trademark searches as legal opinions, screen color as a print proof, concept packaging as a production dieline, or environment mockups as construction drawings.
 - Do not use one-off image outputs as final vectors when the repo needs SVG or platform icon formats.
 - Do not encode a product noun, feature, or metaphor as a literal pictogram merely because it is easy to prompt. Formal relationships must survive without the explanatory story.
-- Do not allow a single generated core-mark candidate to become the parent of downstream assets before a human collision review approves it.
+- Do not allow a single generated core-mark candidate to become the parent of downstream assets before passing the internal ECD 90+ pool review (or explicit user approval when co-reviewing).
 - Do not report exploration images as a delivered Brand VI. A production request ends only with item-level `complete`, `blocked`, `not-applicable`, or `external-handoff` status.
 - Do not count family anchors, reference boards, rejected candidates, or QA evidence as deliverables.
 - Do not make a style name carry the prompt; require observable visual rules that distinguish sibling directions.

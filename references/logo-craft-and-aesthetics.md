@@ -47,11 +47,27 @@ Every enduring masterpiece in *Logo Modernism* and contemporary brand design ach
 
 ---
 
-## 4. The Ruthless Logo Gate (Before Any Downstream Asset Runs)
+## 4. The Autonomous Top-Agency "90+ Pool" Studio Loop (No Human in the Loop)
 
-Apply this private critique brutally to every logo candidate (NEVER display this rubric in client books):
+Top design agencies (Pentagram, Collins, Koto, Studio Dumbar) do NOT push raw Round 1 explorations onto the client and ask *"should I proceed to Step 2?"*. Instead, the agent acts as an **autonomous Executive Creative Director (ECD)** running a ruthless internal critique, rejection, and refinement loop — delivering finished, museum-grade results end-to-end unless the user explicitly requested step-by-step co-review.
 
-1. **The Fiverr / Clipart Kill Test:** Could this shape appear on page 1 of a free vector icon pack or automated logo generator? If yes → **INSTANT REJECT.**
-2. **The Cognitive Hook Test:** Is there a genuine visual hook (topological continuity, rotational ambigram, letter-fused wit, heraldic rhythm, or custom optical quirk) that makes a designer pause? If it is just 2 plain polygons → **INSTANT REJECT.**
-3. **The Napkin Doodle + 16px Scale Test (*Sagi Haviv*):** Can someone sketch its core idea from memory in 5 seconds, AND does its negative space stay crisp at 16px?
-4. **Human Approval Gate:** Always pause and align with the user on the Logo direction **BEFORE** launching downstream photography, mockups, or book assembly. Never build a 30-page VI book on top of an unapproved or mediocre logo.
+### The Golden Rule: Pick Among 90s — NEVER Pick a 60 Out of 30s
+Treating an exploration board as a forced multiple-choice test where the "least bad" cell wins is fatal. Selecting a 60-point logo out of six 30-point drafts poisons every downstream photograph, mockup, and page of the Brand Book.
+
+Apply this **private 100-point ECD Scorecard** brutally to every candidate (NEVER print scores, rubrics, or rejected candidates in client deliverables):
+
+| Dimension | Max | Instant-Kill Failure Mode |
+| --- | :---: | --- |
+| **1. Zero-Clipart Originality** | 25 | Looks like a 2-piece tangram cutout, Looka/Fiverr template, or stock icon → **INSTANT REJECT** |
+| **2. Cognitive Visual Hook** | 25 | No topological continuity, rotational ambigram, letter-fused wit, heraldic rhythm, or custom typographic quirk → **INSTANT REJECT** |
+| **3. Single-Color Silhouette & 16px Scale** | 20 | Needs a 2-color split or gradient to read, or negative-space apertures choke at 16px |
+| **4. Optical Balance & Stroke Craft** | 15 | Clumsy curves, uneven stroke weights, mechanical stiffness, or garbled CJK/Latin glyphs |
+| **5. Napkin Recall & Brand Resonance** | 15 | Cannot be sketched from memory in 5 seconds (*Sagi Haviv*), or feels disconnected from the entity's essence |
+
+### Internal Autonomous Gate Protocol (Repeat Until the Pool Hits ≥ 90)
+1. **Diverge Across Archetypes:** Generate at least 2 distinct pure-monochrome exploration boards spanning multiple iconic archetypes (never 6 tweaks of one weak polygon).
+2. **Brutal ECD Culling:** Inspect every candidate at full resolution and score honestly.
+   - **If fewer than 2 candidates score ≥ 90:** **HARD-REJECT THE ENTIRE ROUND.** Diagnose *why* (too literal? too thin? too rigid? weak negative space?), pivot the structural hook and prompt craft, and launch Round 2 (and Round 3 if needed).
+   - **If a candidate reaches 80–89 with a strong underlying hook:** Run a **Finalist Craft Refinement Sprint** (generating refined pure-monochrome structural variations of the strongest hooks until you have a genuine **90+ Finalist Pool**).
+3. **Select From the 90+ Pool & Lock Masters:** Choose the single most enduring mark from the 90+ pool, render it as a crisp single-color opaque master (`A1_symbol` + `trace_svg: true`) alongside an independently proportioned bespoke wordmark (`A2_wordmark` + `trace_svg: true`), visually inspect both masters and vector traces at full resolution, and **immediately proceed autonomously** into downstream art-direction anchors, touchpoint photography, and Monograph Book assembly.
+4. **Silent Downstream QA:** Apply the same autonomous ECD bar at every subsequent phase (anchors, touchpoints, PDF spreads) — silently rejecting and regenerating any weak, synthetic, text-drifted, or off-aspect output before presenting the final curated work.
