@@ -36,12 +36,11 @@ Create brand systems that behave like water: take the shape of the project, prod
    - Write or update a `visual-identity.md` / `brand-vi-inventory.md` style document before mass generation.
    - Use `references/workflow.md` for the decision gates.
 
-4. **Derive mark form through operations, not pictograms.**
-   - Translate the business scenario into 2-4 tensions or relationships such as controlled/autonomous, local/distributed, continuous/reversible, open/bounded, or individual/system.
-   - Translate each relationship into formal operations: join, split, interrupt, offset, repeat, phase, fold, overlap, crop, counterform, shared axis, or controlled gap. Treat trend reports as an operation vocabulary, never as a style menu.
-   - Decide whether the identity should begin with a wordmark, monogram, symbol, or responsive family. Do not assume a standalone icon is required.
-   - Explore at least three structurally different families in black and white before selecting a direction. Run semantic-collision checks before adding color or material.
-   - Read the mark-form derivation and collision rules in `references/design-theory.md`.
+4. **Derive iconic mark architecture — never generic 2-piece tangram clipart.**
+   - Read `references/logo-craft-and-aesthetics.md` and `references/design-theory.md` before exploring any mark.
+   - Explore across genuinely distinct **iconic mark archetypes** — (1) Pure Sculptural Wordmark / Optical-Quirk Logotype (no gratuitous abstract icon!), (2) Monogram / Rotational Ambigram / Letter-Fused Wit, (3) Topological Interlock / Op-Art Continuity, (4) Heraldic Radial / *Kamon* Crest — rather than 6 variations of sliced squares or parallelograms.
+   - Lock the mark in **pure single-color monochrome** first (banning 2-color patchwork splits on weak shapes). Apply the Fiverr/Clipart Kill Test ruthlessly: if no candidate on a board reaches genuine museum/studio caliber, **reject the entire board** and rethink the structural hook.
+   - Always pause for **human logo approval** before running downstream photography, mockups, or book assembly.
 
 5. **Design the generation DAG deliberately.**
    - Branch before convergence: strategy tensions -> operation studies -> three or more form families -> collision review -> one approved direction -> production-clean mark -> variants -> product outputs -> proof sheets.
@@ -108,6 +107,7 @@ Create brand systems that behave like water: take the shape of the project, prod
 - `references/consumer-integration.md`: canonical/derivative/evidence packaging, product consumption, fonts, licenses, Agent rules, and repo-side checks.
 - `references/trends-2026.md`: current aesthetic trends — rising, falling, and trend-tracking sources.
 - `references/design-theory.md`: durable identity theory — strategy frameworks, distinctive-asset science, craft criteria, verification battery, verbal identity.
+- `references/logo-craft-and-aesthetics.md`: anti-tangram clipart laws, the 4 true archetypes of iconic marks (*Logo Modernism*, Chermayeff, Kamon, optical-quirk wordmarks/ambigrams), single-color mastery, and ruthless reject-all-6 gate.
 - `references/aesthetic-art-direction.md`: delivery purity iron law, monograph editorial pacing & whitespace, pigment vs. raw RGB physics, studio mockup realism, and aesthetic multi-hop DAG role separation.
 - `references/research-evidence.md`: evidence levels, source hierarchy, freshness, conflict, and quantitative-claim discipline.
 - `references/inspiration-sources.md`: reference galleries mapped to pipeline stages, GitHub brand-as-code ecosystem (DESIGN.md schema, icon slot canon, DTCG tokens), and AI-era anti-slop practice.
