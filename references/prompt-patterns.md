@@ -100,13 +100,23 @@ No generated text, no extra logos, no watermark.
 
 ## Standing Negative Constraints (append to every generation prompt)
 
-Ban the AI-slop signature explicitly; models default to it:
+Ban the AI-slop and cheap-CGI mockup signatures explicitly; models default to them:
 
 ```text
 No purple-blue gradients, no floating gradient orbs, no glassmorphism,
-no sparkle/star AI icons, no fake 3D depth or bevels, no watermark,
-no generated text.
+no sparkle/star AI icons, no fake 3D depth or bevels, no neon edge glow
+or backlit laser lines, no waxy plastic specular sheen, no sterile
+centered Canva flat-lay grid, no crowded multi-product tabletop dump,
+no watermark, no generated filler text.
 ```
+
+## Art-Directed Photography & Mockup Discipline
+
+See `references/aesthetic-art-direction.md` for the full operating system. For every physical mockup or material study:
+- Prefer **single-source natural directional light** (window raking light, overcast architectural skylight) with soft fall-off and real ambient occlusion over flat studio softbox or glowing rim highlights.
+- Specify **optical prime-lens shallow depth of field** (`50mm` / `85mm` at `f/2.0–f/2.8`), off-axis editorial angles, and graceful edge-bleed cropping rather than infinite CGI sharpness and dead-center symmetry.
+- Introduce **tactile physical friction** (uncoated paper grain, ink absorption into cotton fibers, woven textile texture, subtle matte patina, candid human interaction) and **editorial ink pigments** rather than raw max-saturation digital RGB primaries.
+- When passing multiple upstream DAG references (`A + B + C → D`), assign **orthogonal visual roles** (Geometry + Lighting/Tonal Grade + Substrate Texture + Spatial World) to keep the composition sparse and single-subject — never cram 5–7 separate objects onto one table.
 
 ## Prompt Hygiene
 

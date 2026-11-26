@@ -9,7 +9,7 @@
     "a5": {"phase": "foundations", "producer": "graphic-system", "gate": "strategy-approved", "output": "vector+guidelines"},
     "a6": {"phase": "dependent-applications", "producer": "identity-variant-system", "gate": "mark-approved", "output": "approved-masters+guidelines+manifest"},
     "a7": {"phase": "foundations", "producer": "typography-system", "gate": "strategy-approved", "output": "type-scale+tokens+license-register"},
-    "a8": {"phase": "foundations", "producer": "grid-system", "gate": "strategy-approved", "output": "grid-spec+ablation-proofs"},
+    "a8": {"phase": "foundations", "producer": "grid-system", "gate": "strategy-approved", "output": "grid-spec+layout-templates"},
     "a9": {"phase": "foundations", "producer": "art-direction", "gate": "strategy-approved", "output": "guidelines+reference-plates+icons"},
     "a10": {"phase": "specialist-applications", "producer": "cmf-materiality", "gate": "strategy-approved", "output": "cmf-boards+supplier-spec"},
     "a11": {"phase": "dependent-applications", "producer": "motion-sonic-core", "gate": "mark-approved", "output": "motion-tokens+gif+audio-brief"},
@@ -50,7 +50,6 @@
   },
   "item_overrides": {
     "a1-01": {"phase": "mark-development", "producer": "identity-design", "gate": "strategy-approved", "output": "vector-master+raster-proofs", "creates_gate": "mark-approved"},
-    "a8-05": {"phase": "verification", "producer": "ablation-stress-proof", "gate": "mark-approved", "output": "logo-removed+grayscale+micro-proofs"},
     "b2-03": {"producer": "email-template", "output": "editable-html+rendered-proof"},
     "b2-04": {"producer": "qr-system", "output": "vector+destination-record+scan-report"},
     "b2-05": {"producer": "platform-icon", "output": "vector-source+platform-exports+context-proofs"},

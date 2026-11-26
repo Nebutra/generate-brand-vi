@@ -30,7 +30,7 @@ Create brand systems that behave like water: take the shape of the project, prod
    - Establish the evidence level: supplied facts, repo evidence, stakeholder hypothesis, or research-backed finding. Do not invent market research or claim legal clearance.
    - Abstract the brand IP from the product's business scenario — what the product does or means for its buyers. Never promote an incidental metaphor (from internal docs, the agent's own process language, or this skill's documentation) into the client brand's IP.
    - Name, language variants, tone, design philosophy, cultural references, material metaphors, shape grammar, palette, typography, imagery, motion if relevant, and negative constraints.
-   - Position against the current aesthetic landscape with `references/trends-2026.md`; ground craft decisions in `references/design-theory.md`; pull stage-appropriate visual references via `references/inspiration-sources.md`.
+   - Position against the current aesthetic landscape with `references/trends-2026.md`; ground craft decisions in `references/design-theory.md`; enforce monograph-grade editorial pacing, pigment restraint, delivery purity, and art-directed mockup realism via `references/aesthetic-art-direction.md`; pull stage-appropriate visual references via `references/inspiration-sources.md`.
    - Apply `references/research-evidence.md`: prefer primary sources, label hypotheses and aesthetic references, date time-sensitive claims, and never repeat unsupported quantitative precision.
    - Treat user aesthetic direction as product strategy, not decoration.
    - Write or update a `visual-identity.md` / `brand-vi-inventory.md` style document before mass generation.
@@ -108,6 +108,7 @@ Create brand systems that behave like water: take the shape of the project, prod
 - `references/consumer-integration.md`: canonical/derivative/evidence packaging, product consumption, fonts, licenses, Agent rules, and repo-side checks.
 - `references/trends-2026.md`: current aesthetic trends — rising, falling, and trend-tracking sources.
 - `references/design-theory.md`: durable identity theory — strategy frameworks, distinctive-asset science, craft criteria, verification battery, verbal identity.
+- `references/aesthetic-art-direction.md`: delivery purity iron law, monograph editorial pacing & whitespace, pigment vs. raw RGB physics, studio mockup realism, and aesthetic multi-hop DAG role separation.
 - `references/research-evidence.md`: evidence levels, source hierarchy, freshness, conflict, and quantitative-claim discipline.
 - `references/inspiration-sources.md`: reference galleries mapped to pipeline stages, GitHub brand-as-code ecosystem (DESIGN.md schema, icon slot canon, DTCG tokens), and AI-era anti-slop practice.
 - `subskills/extend-wordmark-font/SKILL.md`: derive an A-Z/a-z display alphabet from approved wordmark glyphs, then produce PNG/SVG glyphs and TTF/WOFF2 packages.
@@ -117,7 +118,9 @@ Create brand systems that behave like water: take the shape of the project, prod
 - Do not derive the brand IP from the skill's own process metaphors or other incidental language; the mark must abstract the product's business scenario and pass the one-sentence buyer test (`references/design-theory.md`).
 - Do not accept AI-slop defaults: purple-blue gradient orbs, glassmorphism, sparkle icons, fake 3D depth, default-grotesk typography. Ban them in prompts and reject them in review.
 - Do not ship brand color pairings that fail WCAG 2.2 AA contrast; emit palettes as verified foreground/background pairs.
-- Do not let rejected exploration files remain in the product-consumable asset tree.
+- Do not let rejected exploration files remain in the product-consumable asset tree — and NEVER place rejected exploration boards, unapproved candidates, or internal DAG/node/pipeline debug labels inside a client-facing Brand Book, VI Manual, or Showcase.
+- Do not turn internal quality criteria or evaluation lenses (such as Element-Removal / grayscale ablation, anti-blanding audits, or DAG dependency diagrams) into client-facing chapters, modules, or "PASS" proof pages. Internalize them silently during private critique to reject and iterate weak assets; never performatively display workload in place of craft.
+- Do not cram client VI pages with 8–10px micro-text metadata, repetitive dashboard/KPI cards beneath images, or double-nested screenshots; follow `references/aesthetic-art-direction.md` for 40–60% whitespace, readable type floors, rhythmic full-bleed pacing, pigment restraint, and natural single-source studio photography (zero AI glow, zero fake 3D shader grids, zero crowded multi-object tabletop dumps).
 - Do not preserve old brand remotes, names, docs, or assets when the user asks for a complete migration.
 - Do not confuse compatibility code named `legacy` with visual legacy assets; inspect context before deleting.
 - Do not introduce a landing-page aesthetic into operational software unless the product surface actually calls for it.

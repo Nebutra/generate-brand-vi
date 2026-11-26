@@ -23,7 +23,7 @@
     "external-specialist": "Requires legal, trademark, architectural/engineering, commercial font/music licensing, or certified audit sign-off; pipeline delivers formal briefs and acceptance criteria."
   },
   "modules": {
-    "s1": {"name": "品牌策略与架构", "layer": "L0", "role": "core", "fulfillment": "full-auto", "items": ["品牌定位与核心战略张力", "竞品视觉审计与反同质化（反Blanding）清单", "原生结构原型推导（Step 2.5概念桥接）", "品牌架构模型（单一/背书/子品牌/联合品牌）", "目标受众触点与核心行为目标映射"]},
+    "s1": {"name": "品牌策略与架构", "layer": "L0", "role": "core", "fulfillment": "full-auto", "items": ["品牌定位与核心价值主张", "行业格局与视觉差异化定位", "品牌核心理念与设计哲学", "品牌架构模型（单一/背书/子品牌/联合品牌）", "目标受众触点与核心体验规划"]},
     "s2": {"name": "语词识别系统", "layer": "L0", "role": "core", "fulfillment": "full-auto", "items": ["中英文全称简称与产品线命名体系", "品牌口号与副标语架构", "品牌声线（Voice常量）与分场景语调（Tone变量）矩阵", "核心信息支柱与标准话术样本", "术语词表与禁用表达规范"]},
     "a1": {"name": "企业标志规范", "layer": "L1", "role": "core", "fulfillment": "full-auto", "items": ["标志标准图形", "企业标志墨稿", "标志方格制图", "标志限定规范", "标志预留空间与最小化比例"]},
     "a2": {"name": "企业标准字体规范", "layer": "L1", "role": "core", "fulfillment": "full-auto", "items": ["简称中文字体方格制图", "简称英文字体方格制图", "简称中英文字体组合方格制图", "全称中文字体方格制图", "全称英文字体方格制图", "全称中英文字体组合方格制图"]},
@@ -32,7 +32,7 @@
     "a5": {"name": "辅助图形规范", "layer": "L2", "role": "substitutable-engine", "fulfillment": "full-auto", "items": ["辅助图形", "辅助图形使用规范"]},
     "a6": {"name": "标志皮肤与响应式变体系统", "layer": "L2", "role": "substitutable-engine", "fulfillment": "full-auto", "items": ["标志响应式版本架构", "图形标志皮肤母版", "字形标志变体母版", "标志皮肤家族及适用场景", "标志皮肤与字标组合锁定规范", "季节活动合作限定治理", "动态空间实验变体静态回退", "标志皮肤生成依赖与版本治理规范"]},
     "a7": {"name": "排版字体与信息层级系统", "layer": "L1", "role": "core", "fulfillment": "full-auto", "items": ["品牌展示与正文及等宽字体家族选型", "字阶比例尺（Scale Ramp）与行高字距节奏", "中英数字混排与标点排版规范", "明暗背景排版对比与无障碍可读性", "商业字体授权状态与系统回退栈"]},
-    "a8": {"name": "空间与版式网格系统", "layer": "L1", "role": "core", "fulfillment": "full-auto", "items": ["多栏结构网格与基准线节奏（System-as-Logo）", "页边距留白比例与容器几何语法", "信息层级处理与坐标边注规范", "跨画幅响应式版式适配法则", "去Logo与灰度消融压测验证页"]},
+    "a8": {"name": "空间与版式网格系统", "layer": "L1", "role": "core", "fulfillment": "full-auto", "items": ["多栏结构网格与基准线节奏", "页边距留白比例与容器几何语法", "信息层级与版面呼吸节奏规范", "跨画幅响应式版式适配法则"]},
     "a9": {"name": "影像插画与图标视觉语言", "layer": "L2", "role": "substitutable-engine", "fulfillment": "full-auto", "items": ["品牌摄影构图光影与调色视觉导演规范", "专属品牌插画风格与笔触构图语法", "品牌图标网格描边与语义体系", "数据可视化与科学/商业图表视觉规范", "AI生图视觉一致性控制词与禁用项"]},
     "a10": {"name": "材质工艺与硬件CMF系统", "layer": "L2", "role": "substitutable-engine", "fulfillment": "visual-ready-handoff", "items": ["纸张克重与特种印刷工艺规范（烫印击凸UV）", "实体与硬件CMF色彩材质表面处理体系", "金属玻璃陶瓷等基材标识蚀刻与丝印规范", "材质光影表现样板与供应商打样验收标准"]},
     "a11": {"name": "通用动态与声音识别基础", "layer": "L2", "role": "substitutable-engine", "fulfillment": "visual-ready-handoff", "items": ["标志动态演绎（Logo Reveal）与循环动效", "动效物理法则与缓动时长Token", "影视片头落版与动态字幕条模板", "品牌声音标识Brief与交互提示音分类", "减弱动态（Reduced Motion）静态回退规范"]},
@@ -69,7 +69,7 @@
     "c12": {"name": "AI产品无障碍", "layer": "L3", "role": "touchpoint", "fulfillment": "full-auto", "items": ["流式内容屏幕阅读器播报", "完整键盘操作与焦点管理", "减少动态及静态回退", "非颜色依赖状态表达", "可暂停动态输出", "代码图表引用语义结构", "自动更新内容的用户控制", "多语言与认知可访问性检查"]},
     "c13": {"name": "模型Agent与生态品牌架构", "layer": "L3", "role": "touchpoint", "fulfillment": "full-auto", "items": ["产品模型Agent品牌主从关系", "第一方与第三方模型标识", "Agent头像名称能力与权限", "插件连接器模板技能图标", "Official Verified Community状态", "市场卡片详情页及安装授权", "客户自定义Agent共存规则", "生态资产审核与下架状态"]},
     "c14": {"name": "AI动态与声音系统", "layer": "L3", "role": "touchpoint", "fulfillment": "visual-ready-handoff", "items": ["AI唤醒理解生成完成动效", "非误导性思考与进度表达", "流式响应节奏", "工具调用及多Agent切换动效", "批准警告成功错误提示音", "视频演示与产品发布动效", "Reduced Motion及静态回退", "声音版权格式与响度规范"]},
-    "g1": {"name": "品牌规范书在线中心与资产治理", "layer": "L4", "role": "governance", "fulfillment": "full-auto", "items": ["完整出版级VI品牌规范书（高保真PDF）", "交互式在线品牌中心（Brand Hub HTML）", "生产级矢量与Design Tokens源资产包（canonical+derivatives）", "多跳DAG依赖图与资产校验清单（Manifest）", "外部供应商与法务交接说明书（External Handoff Briefs）"]}
+    "g1": {"name": "品牌规范书在线中心与资产治理", "layer": "L4", "role": "governance", "fulfillment": "full-auto", "items": ["完整出版级VI品牌规范书（高保真PDF）", "交互式在线品牌中心（Brand Hub HTML）", "生产级矢量与Design Tokens源资产包（canonical+derivatives）", "品牌资产清单与版本维护规范", "外部供应商与法务交接说明书（External Handoff Briefs）"]}
   },
   "profiles": {
     "digital-product": ["s1", "s2", "a1", "a2", "a3", "a4", "a5", "a7", "a8", "a9", "b2", "b14", "b15", "b17", "c1", "c9", "c12", "g1"],
