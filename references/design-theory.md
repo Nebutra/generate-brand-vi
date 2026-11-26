@@ -125,6 +125,35 @@ and banned readings.
    at 24-32 px. Reject both lookalikes and forms that disappear into generic geometry.
 10. **Operation integrity test:** verify that one clear formal operation governs
     wordmark, icon, layout and motion rather than a one-off symbolic trick.
+11. **System-level "Element-Removal" ("Smash Your Brand") stress test**
+    *(Martin Lindstrom × Jenni Romaniuk × Karl Gerstner / Martin Lorenz)*:
+    Evaluate the entire identity *system* (not just the isolated mark) across
+    three ablations to expose single-point-of-failure fragility:
+    - *Strip the logo & brand name:* Do typographic voice, spatial grid grammar
+      ("System-as-Logo", e.g., ABCD *EDITOR*, Linear, MIT Media Lab), graphic
+      motif, and tonal rhythm still uniquely point to this brand?
+    - *Strip any mascot or hero illustration:* Does the underlying structural
+      and typographic architecture still hold unmistakable identity?
+    - *Strip color (grayscale / monochrome):* Do silhouette, contrast hierarchy,
+      negative space, and geometric/editorial rhythm survive intact?
+    Treat ablation strictly as a **diagnostic means**, never as a mechanical
+    checklist goal — distribute recognition across orthogonal **Constants**
+    (form, type, grid, motif, materiality) so **Variables** flex freely on the
+    way to D&AD-grade original craft.
+
+## Programmes, not pictures (Constants vs. Variables)
+
+- **Karl Gerstner (*Designing Programmes*):** *"Instead of solutions for
+  problems, programmes for solutions."*
+- **Martin Lorenz (*Flexible Visual Systems*):** Lock a small disciplined set
+  of **Constants** so **Variables** adapt across media without brand fracture.
+- **A Black Cover Design (Guang Yu / Nod Young):** *"Suitable (合适)"* over
+  fixed house style, and *"design the information-processing grammar, not a
+  picture"* — never map industries or passing examples into hardcoded `/mode`
+  parameters or rigid templates.
+- **Michael Johnson (*Branding: In Five and a Half Steps*):** Never skip
+  **Step 2.5** — bridge strategic truth to one concrete, native structural
+  prototype before rendering surface touchpoints.
 
 ## Verbal identity
 

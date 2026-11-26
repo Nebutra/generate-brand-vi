@@ -7,11 +7,19 @@ Use this as a scoping matrix, not a mandate to produce every row. Mark each item
 Selection; strategy and verbal identity; core VI; digital, physical, campaign,
 product, AI SaaS, motion, governance, and delivery surfaces.
 
-## Selection Model
+## Selection Model (5-Layer Composable Architecture)
 
-- Use `vi-deliverables.json` as the canonical item-level A1-B13 catalog.
-- Start from a scene profile only to seed optional candidates, then record the actual item-level decisions in `brand-vi-scope.json`.
-- A profile is not a package tier and does not imply that unselected modules are lower value.
+- Use `vi-deliverables.json` (schema v2) as the canonical item-level catalog organized across **5 orthogonal layers**:
+  - **L0 · Strategy & Verbal (`S1–S2`)**: Positioning, anti-blanding audit, Step 2.5 prototype, brand architecture, naming, voice & tone.
+  - **L1 · Core Visual Constitution (`A1–A4, A7–A8`)**: Mandatory structural invariants — mark, wordmark, color, lockups, editorial/functional typography ramp, and spatial grid grammar ("System-as-Logo" + Element-Removal ablation proof).
+  - **L2 · Substitutable Expression Engines (`A5, A6, A9, A10, A11, B13`)**: **Horizontally swappable core visual engines** — select 1–3 engines native to the brand's habitat (auxiliary graphics, logo skins, art direction/photography/illustration/iconography, hardware CMF/print craft, universal motion/sonic, or mascot IP). Never force a mascot or unrelated engine by dogma.
+  - **L3 · Modular Touchpoint Blocks (`B1–B19, C1–C14`)**: À-la-carte application modules spanning stationery, modern editorial/pitch/whitepapers (`B14`), modern social/content engines (`B15`), events/keynotes/broadcast (`B16`), generic web/digital product (`B17`), hardware/cleanroom (`B18`), e-commerce/DTC (`B19`), physical/retail/industrial (`B3–B12`), and deep AI SaaS trust/runtime systems (`C1–C14`).
+  - **L4 · Governance & Delivery Vehicles (`G1`)**: Book-scale PDF Brand Manual, interactive Web Brand Hub HTML, canonical/derivative/token source package, multi-hop DAG manifest, and external supplier handoff briefs.
+- **Fulfillment Tiers (Client-Facing Honesty):** Every module declares one fulfillment maturity tier:
+  - `full-auto`: Turnkey 100% production delivery via generative + deterministic SVG/HTML/PDF/Token pipelines.
+  - `visual-ready-handoff`: ~80% finished visual artwork, layouts, and photorealistic proofs; final manufacturing requires supplier dielines, physical dimensions, or press proofs.
+  - `external-specialist`: Legal/trademark clearance, architectural engineering, commercial font/music licensing, or certified compliance audits — deliver crisp specifications and acceptance criteria rather than fabricating sign-off.
+- Start from a scene profile only to seed optional candidates, then select **every module genuinely coupled to the brand's core and real habitat** in `brand-vi-scope.json`. Never artificially starve a rich brand into a thin pamphlet, and never pad a scope with archaic irrelevant filler.
 - Do not infer that every child of a selected module is required. Use stable IDs such as `b2-05` and item-level route overrides for materially different producers, outputs, gates, or acceptance tests.
 - Keep strategy, verbal identity, rights, governance, source ownership, and validation as cross-system requirements.
 
